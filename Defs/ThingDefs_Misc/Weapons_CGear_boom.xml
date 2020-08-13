@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseMakeableCGearGrenade" ParentName="BaseWeapon" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <researchPrerequisite>CGearTech</researchPrerequisite>
+      <recipeUsers>
+        <li>TableCGear</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories Inherit="false">
+      <li>TCGrenades</li>
+    </thingCategories>
+  </ThingDef>
+  <!-- ==================== Charge grenade ========================== -->
+  <ThingDef ParentName="BaseMakeableCGearGrenade">
+    <defName>Weapon_CGearGrenadeFrag</defName>
+    <label>TC Frag Grenades</label>
+    <description>Charged fragmentation grenades. They can be thrown a short distance, where they'll explode.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_Grd_Frag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>691</MarketValue>
+    </statBases>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>50</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw frag grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>13.0</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_CGear_GrenadeFrag</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GrenadeFrag</defName>
+    <label>TC Frag grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFrag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>70</damageAmountBase>
+      <explosionDelay>80</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- ==================== Smoke grenade ========================== -->
+  <ThingDef ParentName="BaseMakeableCGearGrenade">
+    <defName>Weapon_CGearGrenadeSmoke</defName>
+    <label>TC Smoke Grenades</label>
+    <description>Charged smoke grenades. They can be thrown a short distance, where they'll explode.</description>
+    <recipeMaker>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_Grd_Smoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+      <MarketValue>627</MarketValue>
+    </statBases>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>50</Chemfuel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw smoke grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>13.0</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_CGear_GrenadeSmoke</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GrenadeSmoke</defName>
+    <label>TC Smoke grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeSmoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>Smoke</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionDelay>20</explosionDelay>
+      <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  <!-- ==================== Flashbang grenade ========================== -->
+  <ThingDef ParentName="BaseMakeableCGearGrenade">
+    <defName>Weapon_CGearGrenadeFlashBang</defName>
+    <label>TC Flashbang Grenades</label>
+    <description>Charged flashbang grenades. They can be thrown a short distance, where they'll explode.</description>
+    <recipeMaker>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_Grd_FlashBang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>14000</WorkToMake>
+      <MarketValue>682</MarketValue>
+    </statBases>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>60</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw flashbang grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>13.0</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_CGear_GrenadeFlashBang</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GrenadeFlashBang</defName>
+    <label>TC Flashbang grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFlashBang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- ==================== Incendiary grenade ========================== -->
+  <ThingDef ParentName="BaseMakeableCGearGrenade">
+    <defName>Weapon_CGearGrenadeFlame</defName>
+    <label>TC Incendiary Grenades</label>
+    <description>Charged incendiary grenades. They can be thrown a short distance, where they'll explode.</description>
+    <recipeMaker>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_Grd_Flame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>774</MarketValue>
+    </statBases>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>100</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw incendiary grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>13.0</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_CGear_GrenadeFlame</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GrenadeFlame</defName>
+    <label>TC Incendiary grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFlame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Flame</damageDef>
+      <!-- default damage -->
+      <explosionDelay>20</explosionDelay>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <!-- ==================== Emp grenade ========================== -->
+  <ThingDef ParentName="BaseMakeableCGearGrenade">
+    <defName>Weapon_CGearGrenadeEMP</defName>
+    <label>TC EMP Grenades</label>
+    <description>Charged EMP grenades. They can be thrown a short distance, where they'll explode.</description>
+    <recipeMaker>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_Grd_EMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>723</MarketValue>
+    </statBases>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>50</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <verbs>
+      <li>
+        <label>throw EMP grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>13.0</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_CGear_GrenadeEMP</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GrenadeEMP</defName>
+    <label>TC EMP grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeEMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>EMP</damageDef>
+      <!-- default damage -->
+      <explosionDelay>50</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- =========================== Grenade Laucher ====================================== -->
+  <ThingDef Name="BaseCGearGunGL" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Ultra</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories Inherit="false">
+      <li>TCWeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompSlotLoadable.CompProperties_SlotLoadable">
+        <slots>
+          <li>CGearSlot_Gun_Boost</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseCGearGunGL" Name="CGear_GLauncher" Abstract="True">
+    <!-- <defName>CGear_GLauncher_Frag</defName> -->
+    <!-- <label>TC Grenade launcher (Frag)</label> -->
+    <!-- <description>Charged Grenade launcher. Has multiple ammo types.</description> -->
+    <!--
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/CGear_GrdLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		-->
+    <soundInteract>Interact_CGear</soundInteract>
+    <generateCommonality>0.02</generateCommonality>
+    <statBases>
+      <WorkToMake>75000</WorkToMake>
+      <Mass>4.0</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.45</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      <MarketValue>1354</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <!--
+		<verbs>
+			<li>
+			    <forcedMissRadius>1.9</forcedMissRadius>			
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Proj_CGear_GL_Frag</defaultProjectile>
+				<warmupTime>2.5</warmupTime>
+				<range>30</range>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>		
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>			
+			</li>
+		</verbs>
+		-->
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6.5</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+    </tools>
+    <!-- Jectools: ThingDef Toggle mechanics not working with verbs @Dec2018 -->
+    <!--
+	 <comps>
+        <li Class="CompToggleDef.CompProperties_ToggleDef">
+            <labelKey>CGearGLAmmoTypeSelect</labelKey>
+        </li>
+    </comps>
+	<inspectorTabs>
+        <li>CompToggleDef.ITab_ToggleDef</li>
+    </inspectorTabs>
+	-->
+  </ThingDef>
+  <ThingDef ParentName="CGear_GLauncher" Name="CGearMake_GLauncher" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableCGear</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <!-- Toggle Modes -->
+  <ThingDef ParentName="CGearMake_GLauncher">
+    <!-- <defName>CGear_GLauncher_TOGGLEDEF_Frag</defName> -->
+    <defName>CGear_GLauncher_Frag</defName>
+    <label>TC Grenade launcher (Frag)</label>
+    <description>Charged Grenade launcher. This launcher is set to launch charged frag grenade ammo.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/GLFrag/CGear_GLauncher_Frag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <verbs>
+      <li>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_CGear_GL_Frag</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30</range>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_CGear_GL</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="CGearMake_GLauncher">
+    <!-- <defName>CGear_GLauncher_TOGGLEDEF_Smoke</defName> -->
+    <defName>CGear_GLauncher_Smoke</defName>
+    <label>TC Grenade launcher (Smoke)</label>
+    <description>Charged Grenade launcher. This launcher is set to launch charged smoke grenade ammo.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/GLSmoke/CGear_GLauncher_Smoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <verbs>
+      <li>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_CGear_GL_Smoke</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30</range>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_CGear_GL</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <!--
+		<menuHidden>true</menuHidden>
+		<tradeability>None</tradeability>
+		 <weaponTags Inherit="false">
+      		<li>ToggleGunDef_NotUsed</li>
+    		</weaponTags> -->
+  </ThingDef>
+  <ThingDef ParentName="CGearMake_GLauncher">
+    <!-- <defName>CGear_GLauncher_TOGGLEDEF_FlashBang</defName> -->
+    <defName>CGear_GLauncher_FlashBang</defName>
+    <label>TC Grenade launcher (Flashbang)</label>
+    <description>Charged Grenade launcher. This launcher is set to launch charged flashbang grenade ammo.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/GLFlashBang/CGear_GLauncher_FlashBang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <verbs>
+      <li>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_CGear_GL_FlashBang</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30</range>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_CGear_GL</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <!--
+		<menuHidden>true</menuHidden>
+		<tradeability>None</tradeability>
+		<weaponTags Inherit="false">
+      		<li>ToggleGunDef_NotUsed</li>
+    		</weaponTags>
+	-->
+  </ThingDef>
+  <ThingDef ParentName="CGearMake_GLauncher">
+    <!-- <defName>CGear_GLauncher_TOGGLEDEF_Flame</defName> -->
+    <defName>CGear_GLauncher_Flame</defName>
+    <label>TC Grenade launcher (Incendiary)</label>
+    <description>Charged Grenade launcher. This launcher is set to launch charge incendiary grenade ammo.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/GLFlame/CGear_GLauncher_Flame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <verbs>
+      <li>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_CGear_GL_Flame</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30</range>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_CGear_GL</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <!--
+		<menuHidden>true</menuHidden>
+		<tradeability>None</tradeability>
+		<weaponTags Inherit="false">
+      		<li>ToggleGunDef_NotUsed</li>
+    		</weaponTags>
+		-->
+  </ThingDef>
+  <ThingDef ParentName="CGearMake_GLauncher">
+    <!-- <defName>CGear_GLauncher_TOGGLEDEF_EMP</defName> -->
+    <defName>CGear_GLauncher_EMP</defName>
+    <label>TC Grenade launcher (EMP)</label>
+    <description>Charged Grenade launcher. This launcher is set to launch charged EMP grenade ammo.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/GLEMP/CGear_GLauncher_EMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <verbs>
+      <li>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Proj_CGear_GL_EMP</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>30</range>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_CGear_GL</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <!--
+		<menuHidden>true</menuHidden>
+		<tradeability>None</tradeability>
+		<weaponTags Inherit="false">
+      		<li>ToggleGunDef_NotUsed</li>
+    		</weaponTags>
+		-->
+  </ThingDef>
+  <!-- ===============  GL Ammo ======================== -->
+  <!-- Frag -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GL_Frag</defName>
+    <label>TC GL Frag grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GL_Frag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>42</speed>
+      <explosionRadius>2.9</explosionRadius>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Smoke -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GL_Smoke</defName>
+    <label>TC GL Smoke grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GL_Smoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>42</speed>
+      <explosionRadius>2.9</explosionRadius>
+      <damageDef>Smoke</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionDelay>10</explosionDelay>
+      <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  <!-- Flashbang -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GL_FlashBang</defName>
+    <label>TC GL Flashbang grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GL_FlashBang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>42</speed>
+      <explosionRadius>2.9</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Incendiary -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GL_Flame</defName>
+    <label>TC GL Incendiary grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GL_Flame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>42</speed>
+      <explosionRadius>2.9</explosionRadius>
+      <damageDef>Flame</damageDef>
+      <!-- default damage -->
+      <explosionDelay>10</explosionDelay>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <!-- EMP -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_CGear_GL_EMP</defName>
+    <label>TC GL EMP grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GL_EMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <speed>42</speed>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>EMP</damageDef>
+      <!-- default damage -->
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+</Defs>

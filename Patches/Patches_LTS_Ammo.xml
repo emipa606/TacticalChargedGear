@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ammunition</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--  Orbital Grenades -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_TCOrbBombGrenade"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_TCOrbBeamGrenade"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <!--  Guns -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_Pistol"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_SMG"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_Shotgun"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_Rifle"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_Sniper"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_Burster"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Gun_CGear_TPC"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <!--  Grenades -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_CGearGrenadeFrag"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_CGearGrenadeSmoke"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_CGearGrenadeFlashBang"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_CGearGrenadeFlame"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Weapon_CGearGrenadeEMP"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <!-- Grenade launchers -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="CGear_GLauncher_Frag"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="CGear_GLauncher_Smoke"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="CGear_GLauncher_FlashBang"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="CGear_GLauncher_Flame"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="CGear_GLauncher_EMP"]</xpath>
+          <value>
+            <li Class="Ammunition.AmmoExtension">
+              <ammo>battery</ammo>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

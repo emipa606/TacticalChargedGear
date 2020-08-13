@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseArtilleryBuilding_CGearGrd" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_CGear_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0.38,0.2,0.56375,0.8)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <stealable>false</stealable>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <tickerType>Normal</tickerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <costStuffCount>100</costStuffCount>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <inspectorTabs>
+      <!-- <li>ITab_TCMortarGrenades</li> -->
+      <li>ITab_Shells</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1900</WorkToBuild>
+      <Mass>32</Mass>
+      <Beauty>-18</Beauty>
+    </statBases>
+    <building>
+      <turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+      <turretBurstCooldownTime>17.5</turretBurstCooldownTime>
+      <buildingTags>
+        <li>Artillery</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Mortars</li>
+      <li>CGearTech_Turrets</li>
+    </researchPrerequisites>
+    <uiIconScale>1.1</uiIconScale>
+    <techLevel>Ultra</techLevel>
+  </ThingDef>
+  <!--=============== Mortar turret ===============-->
+  <ThingDef ParentName="BaseArtilleryBuilding_CGearGrd">
+    <defName>Turret_CGear_Grenade</defName>
+    <label>TC Grenade Mortar</label>
+    <description>Based on the TC mortar but firing multiple grenades.</description>
+    <techLevel>Ultra</techLevel>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+    </comps>
+    <designationHotKey>Misc4</designationHotKey>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <turretGunDef>Artillery_Grenade_CGear</turretGunDef>
+      <buildingTags>
+        <li>Artillery_BaseDestroyer</li>
+      </buildingTags>
+    </building>
+    <uiIconPath>Things/Building/Security/TurretGrenade_CGear_MenuIcon</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+  <ThingDef Name="BaseTCGrdArtilleryWeapon" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <label>artillery error</label>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretGrenade_CGear_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <equipmentType>Primary</equipmentType>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <tradeability>None</tradeability>
+    <weaponTags>
+      <li>Artillery</li>
+    </weaponTags>
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_ChangeableProjectile" />
+    </comps>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>TCGrenadeMortarAmmo</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>TCGrenadeMortarAmmo</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BaseTCGrdArtilleryWeapon">
+    <defName>Artillery_Grenade_CGear</defName>
+    <label>TC Grenade Mortar</label>
+    <description>Grenade Mortar. Lobs grenades over walls. Inaccurate but long-ranged.</description>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>TCGear.Verb_TCShootMulti</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>2.0</warmupTime>
+        <forcedMissRadius>8</forcedMissRadius>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>19.9</minRange>
+        <range>300</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

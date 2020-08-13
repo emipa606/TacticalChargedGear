@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Pistol -->
+
+  <Bullet_CGear_Pistol.label>Tactical charge shot</Bullet_CGear_Pistol.label>
+
+  <Gun_CGear_Pistol.label>TC Pistol</Gun_CGear_Pistol.label>
+  <Gun_CGear_Pistol.description>Computerised energized projectile pistol.</Gun_CGear_Pistol.description>
+  <Gun_CGear_Pistol.tools.0.label>stock</Gun_CGear_Pistol.tools.0.label>
+  <Gun_CGear_Pistol.tools.1.label>barrel</Gun_CGear_Pistol.tools.1.label>
+
+
+  <!-- SMG -->
+
+  <Bullet_CGear_SMG.label>Tactical Charge shot</Bullet_CGear_SMG.label>
+
+  <Gun_CGear_SMG.label>TC SMG</Gun_CGear_SMG.label>
+  <Gun_CGear_SMG.description>Computerised energy projectile close contact weapon with assitive gyro stabaliser.</Gun_CGear_SMG.description>
+  <Gun_CGear_SMG.tools.0.label>stock</Gun_CGear_SMG.tools.0.label>
+  <Gun_CGear_SMG.tools.1.label>barrel</Gun_CGear_SMG.tools.1.label>
+
+
+  <!-- Shotgun -->
+
+  <Bullet_CGear_Shotgun.label>Tactical Charge shot</Bullet_CGear_Shotgun.label>
+
+  <Gun_CGear_Shotgun.label>TC Shotgun</Gun_CGear_Shotgun.label>
+  <Gun_CGear_Shotgun.description>Computerised energy projectile blaster weapon with assitive gyro stabaliser.</Gun_CGear_Shotgun.description>
+  <Gun_CGear_Shotgun.tools.0.label>stock</Gun_CGear_Shotgun.tools.0.label>
+  <Gun_CGear_Shotgun.tools.1.label>barrel</Gun_CGear_Shotgun.tools.1.label>
+
+
+  <!-- Rifle -->
+
+  <Bullet_CGear_Rifle.label>Tactical Charged shot</Bullet_CGear_Rifle.label>
+
+  <Gun_CGear_Rifle.label>TC Rifle</Gun_CGear_Rifle.label>
+  <Gun_CGear_Rifle.description>Computerised energy projectile weapon with assisted gyro support.</Gun_CGear_Rifle.description>
+  <Gun_CGear_Rifle.tools.0.label>stock</Gun_CGear_Rifle.tools.0.label>
+  <Gun_CGear_Rifle.tools.1.label>barrel</Gun_CGear_Rifle.tools.1.label>
+
+
+  <!-- Sniper -->
+
+  <Bullet_CGear_Sniper.label>Tactical heavy charged shot</Bullet_CGear_Sniper.label>
+
+  <Gun_CGear_Sniper.label>TC Sniper Rifle</Gun_CGear_Sniper.label>
+  <Gun_CGear_Sniper.description>Computerised energy long range support projectile weapon with assistive optics and gyro stabaliser.</Gun_CGear_Sniper.description>
+  <Gun_CGear_Sniper.tools.0.label>stock</Gun_CGear_Sniper.tools.0.label>
+  <Gun_CGear_Sniper.tools.1.label>barrel</Gun_CGear_Sniper.tools.1.label>
+
+
+  <!-- Burster -->
+
+  <Bullet_CGear_Burster.label>Tactical Charge shot</Bullet_CGear_Burster.label>
+
+  <Gun_CGear_Burster.label>TC Burster</Gun_CGear_Burster.label>
+  <Gun_CGear_Burster.description>Computerised energy rapid projectile close contact weapon with assitive gyro stabaliser.</Gun_CGear_Burster.description>
+  <Gun_CGear_Burster.tools.0.label>stock</Gun_CGear_Burster.tools.0.label>
+  <Gun_CGear_Burster.tools.1.label>barrel</Gun_CGear_Burster.tools.1.label>
+
+
+  <!-- Sword -->
+
+  <MeleeWeapon_CGear_Sword.label>TC Sword</MeleeWeapon_CGear_Sword.label>
+  <MeleeWeapon_CGear_Sword.description>Computerised energy sword with gyro stabaliser and vibrational cutting.</MeleeWeapon_CGear_Sword.description>
+  <MeleeWeapon_CGear_Sword.tools.0.label>handle</MeleeWeapon_CGear_Sword.tools.0.label>
+  <MeleeWeapon_CGear_Sword.tools.1.label>point</MeleeWeapon_CGear_Sword.tools.1.label>
+  <MeleeWeapon_CGear_Sword.tools.2.label>edge</MeleeWeapon_CGear_Sword.tools.2.label>
+
+
+  <!-- Knife -->
+
+  <MeleeWeapon_CGear_Knife.label>TC Knife</MeleeWeapon_CGear_Knife.label>
+  <MeleeWeapon_CGear_Knife.description>Computerised energy knife with vibrational cutting.</MeleeWeapon_CGear_Knife.description>
+  <MeleeWeapon_CGear_Knife.tools.0.label>handle</MeleeWeapon_CGear_Knife.tools.0.label>
+  <MeleeWeapon_CGear_Knife.tools.1.label>blade</MeleeWeapon_CGear_Knife.tools.1.label>
+  <MeleeWeapon_CGear_Knife.tools.2.label>point</MeleeWeapon_CGear_Knife.tools.2.label>
+
+
+  <!-- Spear -->
+
+  <MeleeWeapon_CGear_Spear.label>TC Spear</MeleeWeapon_CGear_Spear.label>
+  <MeleeWeapon_CGear_Spear.description>Computerised energy spear with gyro stabaliser and vibrational cutting.</MeleeWeapon_CGear_Spear.description>
+  <MeleeWeapon_CGear_Spear.tools.0.label>handle</MeleeWeapon_CGear_Spear.tools.0.label>
+  <MeleeWeapon_CGear_Spear.tools.1.label>point</MeleeWeapon_CGear_Spear.tools.1.label>
+  <MeleeWeapon_CGear_Spear.tools.2.label>edge</MeleeWeapon_CGear_Spear.tools.2.label>
+
+
+  <!-- Mace -->
+
+  <MeleeWeapon_CGear_Mace.label>TC Mace</MeleeWeapon_CGear_Mace.label>
+  <MeleeWeapon_CGear_Mace.description>TC Mace equipped with gyro stabalisers.</MeleeWeapon_CGear_Mace.description>
+  <MeleeWeapon_CGear_Mace.tools.0.label>handle</MeleeWeapon_CGear_Mace.tools.0.label>
+  <MeleeWeapon_CGear_Mace.tools.1.label>head</MeleeWeapon_CGear_Mace.tools.1.label>
+
+
+</LanguageData>

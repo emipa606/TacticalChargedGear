@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Camouflage and Stealth (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGearHelmet"]/comps</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationTest">
+                <success>Invert</success>
+                <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGearHelmet"]/comps/li[@Class="CompCamo.CompProperties_GearCamo"]</xpath>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGearHelmet"]/comps</xpath>
+                <value>
+                  <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                  <li Class="CompCamo.CompProperties_GearCamo">
+                    <ArcticCamoEff>0.40</ArcticCamoEff>
+                    <DesertCamoEff>0.30</DesertCamoEff>
+                    <JungleCamoEff>0.30</JungleCamoEff>
+                    <StoneCamoEff>0.30</StoneCamoEff>
+                    <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                    <UrbanCamoEff>0.65</UrbanCamoEff>
+                  </li>
+                  <li Class="Observer.CompProperties_Observer">
+                    <SightOffset>+0.10</SightOffset>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGearHelmet"]</xpath>
+            <value>
+              <comps>
+                <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                <li Class="CompCamo.CompProperties_GearCamo">
+                  <ArcticCamoEff>0.40</ArcticCamoEff>
+                  <DesertCamoEff>0.30</DesertCamoEff>
+                  <JungleCamoEff>0.30</JungleCamoEff>
+                  <StoneCamoEff>0.30</StoneCamoEff>
+                  <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                  <UrbanCamoEff>0.65</UrbanCamoEff>
+                </li>
+                <li Class="Observer.CompProperties_Observer">
+                  <SightOffset>+0.10</SightOffset>
+                </li>
+              </comps>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Camouflage and Stealth (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Apparel_ShieldedArmorCGear"]/comps</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationTest">
+                <success>Invert</success>
+                <xpath>/Defs/ThingDef[defName="Apparel_ShieldedArmorCGear"]/comps/li[@Class="CompCamo.CompProperties_GearCamo"]</xpath>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Apparel_ShieldedArmorCGear"]/comps</xpath>
+                <value>
+                  <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                  <li Class="CompCamo.CompProperties_GearCamo">
+                    <ArcticCamoEff>0.40</ArcticCamoEff>
+                    <DesertCamoEff>0.30</DesertCamoEff>
+                    <JungleCamoEff>0.30</JungleCamoEff>
+                    <StoneCamoEff>0.30</StoneCamoEff>
+                    <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                    <UrbanCamoEff>0.65</UrbanCamoEff>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Apparel_ShieldedArmorCGear"]</xpath>
+            <value>
+              <comps>
+                <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                <li Class="CompCamo.CompProperties_GearCamo">
+                  <ArcticCamoEff>0.40</ArcticCamoEff>
+                  <DesertCamoEff>0.30</DesertCamoEff>
+                  <JungleCamoEff>0.30</JungleCamoEff>
+                  <StoneCamoEff>0.30</StoneCamoEff>
+                  <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                  <UrbanCamoEff>0.65</UrbanCamoEff>
+                </li>
+              </comps>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Camouflage and Stealth (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGear"]/comps</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationTest">
+                <success>Invert</success>
+                <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGear"]/comps/li[@Class="CompCamo.CompProperties_GearCamo"]</xpath>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGear"]/comps</xpath>
+                <value>
+                  <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                  <li Class="CompCamo.CompProperties_GearCamo">
+                    <ArcticCamoEff>0.40</ArcticCamoEff>
+                    <DesertCamoEff>0.30</DesertCamoEff>
+                    <JungleCamoEff>0.30</JungleCamoEff>
+                    <StoneCamoEff>0.30</StoneCamoEff>
+                    <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                    <UrbanCamoEff>0.65</UrbanCamoEff>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGear"]</xpath>
+            <value>
+              <comps>
+                <!--
+								<li Class="CompCamo.CompProperties_GearCamo">
+									<ArcticCamoEff>1.00</ArcticCamoEff>
+        							<DesertCamoEff>1.00</DesertCamoEff>
+        							<JungleCamoEff>1.00</JungleCamoEff>
+        							<StoneCamoEff>1.00</StoneCamoEff>
+        							<WoodlandCamoEff>1.00</WoodlandCamoEff>
+        							<UrbanCamoEff>1.00</UrbanCamoEff>
+								</li>
+								-->
+                <li Class="CompCamo.CompProperties_GearCamo">
+                  <ArcticCamoEff>0.40</ArcticCamoEff>
+                  <DesertCamoEff>0.30</DesertCamoEff>
+                  <JungleCamoEff>0.30</JungleCamoEff>
+                  <StoneCamoEff>0.30</StoneCamoEff>
+                  <WoodlandCamoEff>0.35</WoodlandCamoEff>
+                  <UrbanCamoEff>0.65</UrbanCamoEff>
+                </li>
+              </comps>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

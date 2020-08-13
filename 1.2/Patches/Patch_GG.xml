@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ghost Gear (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="MakeableCGearGrdShellBase">
+              <defName>Ammo_CGear_GrdGGHaywireEMP</defName>
+              <label>TC Haywire EMP Ammo Grenade Mortar</label>
+              <description>A specialised magazine loaded with TC Haywire EMP grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+              <statBases>
+                <MarketValue>1037</MarketValue>
+              </statBases>
+              <graphicData>
+                <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdGGHaywireEMP</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+              </graphicData>
+              <comps>
+                <li Class="CompProperties_Explosive">
+                  <explosiveRadius>3.66</explosiveRadius>
+                  <explosiveDamageType>GGHaywireEMP</explosiveDamageType>
+                  <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+                  <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+                  <chanceToStartFire>0.22</chanceToStartFire>
+                  <damageFalloff>true</damageFalloff>
+                  <wickTicks>
+                    <min>50</min>
+                    <max>100</max>
+                  </wickTicks>
+                </li>
+              </comps>
+              <projectileWhenLoaded>Proj_CGear_MortarGrenadeGGHaywireEMP</projectileWhenLoaded>
+              <costList>
+                <RimPlasGraphene>5</RimPlasGraphene>
+                <CarboPlasteel>20</CarboPlasteel>
+                <GGHWMechanites>1</GGHWMechanites>
+                <ComponentIndustrial>6</ComponentIndustrial>
+                <CGearCtrlChip>1</CGearCtrlChip>
+              </costList>
+              <recipeMaker>
+                <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                <effectWorking>Smith</effectWorking>
+                <soundWorking>Recipe_Machining</soundWorking>
+                <workAmount>500</workAmount>
+                <targetCountAdjustment>5</targetCountAdjustment>
+                <workSkill>Crafting</workSkill>
+                <researchPrerequisite>CGearTech_Turrets</researchPrerequisite>
+                <recipeUsers>
+                  <li>GhostGearFab</li>
+                </recipeUsers>
+                <skillRequirements>
+                  <Crafting>11</Crafting>
+                </skillRequirements>
+              </recipeMaker>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="BaseBullet">
+              <defName>Proj_CGear_MortarGrenadeGGHaywireEMP</defName>
+              <label>TC Haywire EMP grenade</label>
+              <thingClass>Projectile_Explosive</thingClass>
+              <graphicData>
+                <texPath>Things/Projectile/CGear_GrenadeGGHaywireEMP</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <shaderType>TransparentPostLight</shaderType>
+              </graphicData>
+              <projectile>
+                <speed>51</speed>
+                <flyOverhead>true</flyOverhead>
+                <explosionRadius>4.9</explosionRadius>
+                <damageDef>GGHaywireEMP</damageDef>
+                <!-- default damage -->
+                <explosionDelay>50</explosionDelay>
+              </projectile>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="CGearMake_GLauncher">
+              <!-- <defName>CGear_GLauncher_TOGGLEDEF_GGHaywireEMP</defName> -->
+              <defName>CGear_GLauncher_GGHaywireEMP</defName>
+              <label>TC Grenade launcher (Haywire EMP)</label>
+              <description>Charged Grenade launcher. This launcher is set to launch charged Haywire EMP grenade ammo.</description>
+              <graphicData>
+                <texPath>Things/Item/Equipment/WeaponRanged/CGear_GLauncher_GGHaywireEMP</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+              </graphicData>
+              <costList Inherit="false">
+                <RimPlasGraphene>20</RimPlasGraphene>
+                <CarboPlasteel>150</CarboPlasteel>
+                <GGHWMechanites>1</GGHWMechanites>
+                <ComponentIndustrial>7</ComponentIndustrial>
+                <CGearCtrlChip>1</CGearCtrlChip>
+              </costList>
+              <recipeMaker>
+                <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                <workSkill>Crafting</workSkill>
+                <effectWorking>Smith</effectWorking>
+                <soundWorking>Recipe_Smith</soundWorking>
+                <recipeUsers>
+                  <li>GhostGearFab</li>
+                </recipeUsers>
+                <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+                <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+                <skillRequirements>
+                  <Crafting>12</Crafting>
+                </skillRequirements>
+              </recipeMaker>
+              <verbs>
+                <li>
+                  <forcedMissRadius>2.9</forcedMissRadius>
+                  <verbClass>Verb_Shoot</verbClass>
+                  <hasStandardCommand>true</hasStandardCommand>
+                  <defaultProjectile>Proj_CGear_GL_GGHaywireEMP</defaultProjectile>
+                  <warmupTime>2.5</warmupTime>
+                  <range>30</range>
+                  <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                  <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                  </targetParams>
+                  <burstShotCount>1</burstShotCount>
+                  <soundCast>Shot_CGear_GL</soundCast>
+                  <soundCastTail>GunTail_Medium</soundCastTail>
+                  <muzzleFlashScale>12</muzzleFlashScale>
+                </li>
+              </verbs>
+              <!--
+							<menuHidden>true</menuHidden>
+							<tradeability>None</tradeability>
+							<weaponTags Inherit="false">
+      							<li>ToggleGunDef_NotUsed</li>
+    						</weaponTags>
+							-->
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="BaseGrenadeProjectile">
+              <defName>Proj_CGear_GL_GGHaywireEMP</defName>
+              <label>TC GL Haywire EMP grenade</label>
+              <thingClass>Projectile_Explosive</thingClass>
+              <graphicData>
+                <texPath>Things/Projectile/CGear_GL_GGHaywireEMP</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+              </graphicData>
+              <projectile>
+                <speed>42</speed>
+                <explosionRadius>3.9</explosionRadius>
+                <damageDef>GGHaywireEMP</damageDef>
+                <!-- default damage -->
+                <explosionDelay>10</explosionDelay>
+              </projectile>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="BaseCGearBullet">
+              <defName>Bullet_CGear_GGHaywireTPC</defName>
+              <label>TPC haywire shot</label>
+              <!-- <thingClass>Projectile_Explosive</thingClass> -->
+              <graphicData>
+                <texPath>Things/Projectile/CGear_GGHaywireTPC</texPath>
+                <graphicClass>Graphic_Flicker</graphicClass>
+              </graphicData>
+              <projectile>
+                <!--
+								<explosionRadius>2.0</explosionRadius>
+								<explosionDelay>5</explosionDelay>
+								-->
+                <flyOverhead>false</flyOverhead>
+                <damageDef>GGHaywireEMP</damageDef>
+                <damageAmountBase>50</damageAmountBase>
+                <speed>50</speed>
+              </projectile>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="BaseCGearHumanMakeableGun">
+              <defName>Gun_CGear_GGHaywireTPC</defName>
+              <label>TC Haywire TPC</label>
+              <description>Computerised particle cannon with gyro stabaliser. Fires Haywire EMP damaging particle balls.</description>
+              <graphicData>
+                <texPath>Things/Item/Equipment/WeaponRanged/CGear_GGHaywireTPC</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+              </graphicData>
+              <soundInteract>Interact_CGear</soundInteract>
+              <statBases>
+                <Mass>8.5</Mass>
+                <WorkToMake>120000</WorkToMake>
+                <AccuracyTouch>0.50</AccuracyTouch>
+                <AccuracyShort>0.55</AccuracyShort>
+                <AccuracyMedium>0.60</AccuracyMedium>
+                <AccuracyLong>0.65</AccuracyLong>
+                <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+                <MaxHitPoints>120</MaxHitPoints>
+                <Flammability>0.3</Flammability>
+                <DeteriorationRate>1</DeteriorationRate>
+                <SellPriceFactor>0.5</SellPriceFactor>
+                <!-- <forcedMissRadius>0.5</forcedMissRadius> -->
+              </statBases>
+              <recipeMaker>
+                <researchPrerequisite>CGearTechTPC</researchPrerequisite>
+                <recipeUsers>
+                  <li>GhostGearFab</li>
+                </recipeUsers>
+                <skillRequirements>
+                  <Crafting>15</Crafting>
+                </skillRequirements>
+              </recipeMaker>
+              <costList Inherit="false">
+                <RimPlasGraphene>50</RimPlasGraphene>
+                <CarboPlasteel>250</CarboPlasteel>
+                <GGHWMechanites>2</GGHWMechanites>
+                <ComponentIndustrial>5</ComponentIndustrial>
+                <CGearCtrlChip>1</CGearCtrlChip>
+              </costList>
+              <tools>
+                <li>
+                  <label>stock</label>
+                  <capacities>
+                    <li>Blunt</li>
+                  </capacities>
+                  <power>9</power>
+                  <cooldownTime>2.3</cooldownTime>
+                </li>
+                <li>
+                  <label>barrel</label>
+                  <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                  </capacities>
+                  <power>10</power>
+                  <cooldownTime>2.1</cooldownTime>
+                </li>
+              </tools>
+              <techLevel>Ultra</techLevel>
+              <weaponTags>
+                <li>AdvancedGun</li>
+                <li>GunHeavy</li>
+              </weaponTags>
+              <verbs>
+                <li>
+                  <verbClass>Verb_Shoot</verbClass>
+                  <hasStandardCommand>true</hasStandardCommand>
+                  <defaultProjectile>Bullet_CGear_GGHaywireTPC</defaultProjectile>
+                  <warmupTime>3.0</warmupTime>
+                  <range>50</range>
+                  <soundCast>Shot_CGear_TPC</soundCast>
+                  <!-- Something Interesting -->
+                  <soundCastTail>GunTail_Heavy</soundCastTail>
+                  <muzzleFlashScale>15</muzzleFlashScale>
+                </li>
+              </verbs>
+            </ThingDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ammunition[1.1]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Ghost Gear (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>/Defs/ThingDef[defName="CGear_GLauncher_GGHaywireEMP"]</xpath>
+            <value>
+              <li Class="Ammunition.AmmoExtension">
+                <ammo>battery</ammo>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>/Defs/ThingDef[defName="Gun_CGear_GGHaywireTPC"]</xpath>
+            <value>
+              <li Class="Ammunition.AmmoExtension">
+                <ammo>battery</ammo>
+              </li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

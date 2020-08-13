@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Frag -->
+
+  <Ammo_CGear_GrdFrag.label>TC Frag Ammo Grenade Mortar</Ammo_CGear_GrdFrag.label>
+  <Ammo_CGear_GrdFrag.description>A specialised magazine loaded with TC frag grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFrag.description>
+
+  <Proj_CGear_MortarGrenadeFrag.label>TC Frag grenade</Proj_CGear_MortarGrenadeFrag.label>
+
+
+  <!-- Smoke -->
+
+  <Ammo_CGear_GrdSmoke.label>TC Smoke Ammo Grenade Mortar</Ammo_CGear_GrdSmoke.label>
+  <Ammo_CGear_GrdSmoke.description>A specialised magazine loaded with TC smoke grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdSmoke.description>
+
+  <Proj_CGear_MortarGrenadeSmoke.label>TC Smoke grenade</Proj_CGear_MortarGrenadeSmoke.label>
+
+
+  <!-- Flashbang -->
+
+  <Ammo_CGear_GrdFlashbang.label>TC Flashbang Ammo Grenade Mortar</Ammo_CGear_GrdFlashbang.label>
+  <Ammo_CGear_GrdFlashbang.description>A specialised magazine loaded with TC flashbang grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFlashbang.description>
+
+  <Proj_CGear_MortarGrenadeFlashBang.label>TC Flashbang grenade</Proj_CGear_MortarGrenadeFlashBang.label>
+
+
+  <!-- EMP -->
+
+  <Ammo_CGear_GrdEMP.label>TC EMP Ammo Grenade Mortar</Ammo_CGear_GrdEMP.label>
+  <Ammo_CGear_GrdEMP.description>A specialised magazine loaded with TC EMP grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdEMP.description>
+
+  <Proj_CGear_MortarGrenadeEMP.label>TC EMP grenade</Proj_CGear_MortarGrenadeEMP.label>
+
+
+  <!-- Flame -->
+
+  <Ammo_CGear_GrdFlame.label>TC Incendiary Ammo Grenade Mortar</Ammo_CGear_GrdFlame.label>
+  <Ammo_CGear_GrdFlame.description>A specialised magazine loaded with TC incendiary grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFlame.description>
+
+  <Proj_CGear_MortarGrenadeFlame.label>TC Incendiary grenade</Proj_CGear_MortarGrenadeFlame.label>
+
+
+</LanguageData>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!--  Settings -->
+  <TCGear.Name>Tactical Charged Gear</TCGear.Name>
+  <TCGear.BarrelReplace>Replace turret barrels:</TCGear.BarrelReplace>
+  <TCGear.ResPct>Relative cost for research %:</TCGear.ResPct>
+  <TCGear.RepPct>Toolbox repair amount per hour %:</TCGear.RepPct>
+  <TCGear.ResTip>Note these changes will only take effect when RimWorld is restarted.</TCGear.ResTip>
+  <TCGear.ResWarn>(Warning: increasing the research % will mean research will become incomplete using the previous value.)</TCGear.ResWarn>
+  <!--  Content -->
+  <TCGear.FBack>Repairing ({0}%) every {1} hour(s).</TCGear.FBack>
+  <!--  CompSlottable -->
+  <CGearGLAmmoTypeSelect>Ammo</CGearGLAmmoTypeSelect>
+
+</LanguageData>

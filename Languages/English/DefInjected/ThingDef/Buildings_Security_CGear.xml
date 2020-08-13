@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mini-turret -->
+
+  <Turret_MiniTurret_CGear.label>TC Mini-turret</Turret_MiniTurret_CGear.label>
+  <Turret_MiniTurret_CGear.description>Based on the standard mini-turret.</Turret_MiniTurret_CGear.description>
+
+  <Bullet_CGear_MiniTurret.label>TC Mini-turret bullet</Bullet_CGear_MiniTurret.label>
+
+  <Gun_CGear_MiniTurret.label>TC Mini-turret gun</Gun_CGear_MiniTurret.label>
+  <Gun_CGear_MiniTurret.description>A tactical charged automatic gun made to be mounted on a turret.</Gun_CGear_MiniTurret.description>
+
+
+  <!-- Mortar turret -->
+
+  <Turret_CGear_Mortar.label>TC Mortar</Turret_CGear_Mortar.label>
+  <Turret_CGear_Mortar.description>Based on the standard manned mortar but with improved aiming capabilities.</Turret_CGear_Mortar.description>
+
+  <Artillery_Mortar_CGear.label>TC Mortar</Artillery_Mortar_CGear.label>
+  <Artillery_Mortar_CGear.description>Mortar launcher. Lobs bombs over walls. Inaccurate but long-ranged.</Artillery_Mortar_CGear.description>
+
+
+  <!-- Traps -->
+
+  <TrapIED_CGear_HE.label>TC IED Charged trap</TrapIED_CGear_HE.label>
+  <TrapIED_CGear_HE.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_HE.description>
+
+
+  <!-- Smoke -->
+
+  <TrapIED_CGear_Smoke.label>TC IED smoke trap</TrapIED_CGear_Smoke.label>
+  <TrapIED_CGear_Smoke.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_Smoke.description>
+
+
+  <!-- Flashbang -->
+
+  <TrapIED_CGear_FlashBang.label>TC IED Flashbang trap</TrapIED_CGear_FlashBang.label>
+  <TrapIED_CGear_FlashBang.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_FlashBang.description>
+
+
+  <!-- EMP -->
+
+  <TrapIED_CGear_EMP.label>TC IED EMP trap</TrapIED_CGear_EMP.label>
+  <TrapIED_CGear_EMP.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_EMP.description>
+
+
+  <!-- Incendiary -->
+
+  <TrapIED_CGear_Flame.label>TC IED incendiary trap</TrapIED_CGear_Flame.label>
+  <TrapIED_CGear_Flame.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_Flame.description>
+
+
+</LanguageData>

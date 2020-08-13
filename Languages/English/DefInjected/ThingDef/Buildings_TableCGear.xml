@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <TableCGear.label>TC Weapons Bench</TableCGear.label>
+  <TableCGear.description>A workbench equipped with all the tools required to make Tactical Charged (TC) Gear.</TableCGear.description>
+
+
+  <!-- TC Chip Stand -->
+
+  <CGearChipStand.label>TC Chip Fabrication</CGearChipStand.label>
+  <CGearChipStand.description>A stand equipped with all the tools required to make Tactical Charged (TC) Chips.</CGearChipStand.description>
+
+
+  <!-- TC Toolbox -->
+
+  <TCToolCabinet.label>TC Tool Cabinet</TCToolCabinet.label>
+  <TCToolCabinet.description>Advanced tool box with power tools that improves work speed when placed near a workbench.</TCToolCabinet.description>
+
+
+</LanguageData>

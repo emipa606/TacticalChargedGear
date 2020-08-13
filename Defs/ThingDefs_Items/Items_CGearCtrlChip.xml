@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedCGearCtrlChip</defName>
+    <label>Unfinished TC Chip</label>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>150.00</MarketValue>
+      <Flammability>0.75</Flammability>
+      <Mass>0.5</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.1</SellPriceFactor>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedCGearCtrlChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  <!-- =============================================================== -->
+  <ThingDef ParentName="ResourceBase" Name="CGearTCChipBase" Abstract="true">
+    <techLevel>Spacer</techLevel>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <!-- Jectools: CompSlot mechanics don't consider stacks when equipping @Dec2018 -->
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>300.00</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.75</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+  </ThingDef>
+  <!-- ======================= Ctrl Chip ================================ -->
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearCtrlChip</defName>
+    <label>TC Control Chip</label>
+    <description>A control chip used in Tactical Charged (TC) Gear.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearCtrlChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>20</stackLimit>
+  </ThingDef>
+  <!-- ===================== Weapon Enhancement ======================== -->
+  <ThingDef Class="CompSlotLoadable.SlotLoadableDef">
+    <defName>CGearSlot_Melee_Power</defName>
+    <thingClass>CompSlotLoadable.SlotLoadable</thingClass>
+    <label>TC Power Slot</label>
+    <description>An enhancement slot for a TC power chip.</description>
+    <slottableThingDefs>
+      <li>CGearPowerChip</li>
+      <li>CGearDodgeChip</li>
+    </slottableThingDefs>
+    <doesChangeStats>true</doesChangeStats>
+  </ThingDef>
+  <ThingDef Class="CompSlotLoadable.SlotLoadableDef">
+    <defName>CGearSlot_Gun_Aim</defName>
+    <thingClass>CompSlotLoadable.SlotLoadable</thingClass>
+    <label>TC Aim Slot</label>
+    <description>An enhancement slot for a TC aim chip.</description>
+    <slottableThingDefs>
+      <li>CGearAimChip</li>
+      <li>CGearReflexChip</li>
+      <li>CGearHunterChip</li>
+    </slottableThingDefs>
+    <doesChangeStats>true</doesChangeStats>
+  </ThingDef>
+  <ThingDef Class="CompSlotLoadable.SlotLoadableDef">
+    <defName>CGearSlot_Gun_Boost</defName>
+    <thingClass>CompSlotLoadable.SlotLoadable</thingClass>
+    <label>TC Boost Slot</label>
+    <description>An enhancement slot for a TC boost chip.</description>
+    <slottableThingDefs>
+      <li>CGearBoostChip</li>
+      <li>CGearHeatSinkChip</li>
+    </slottableThingDefs>
+    <doesChangeStats>true</doesChangeStats>
+  </ThingDef>
+  <!-- *** Melee *** -->
+  <!-- ===================== Power Chip ================================== -->
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearPowerChip</defName>
+    <label>TC Power Chip</label>
+    <description>A power enhancement chip used in Tactical Charged (TC) Gear.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearPowerChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <MeleeWeapon_DamageMultiplier>+0.15</MeleeWeapon_DamageMultiplier>
+          <MeleeWeapon_CooldownMultiplier>-0.20</MeleeWeapon_CooldownMultiplier>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearDodgeChip</defName>
+    <label>TC Dodge Chip</label>
+    <description>A power enhancement chip used in Tactical Charged (TC) Gear. This empowers the dodge skill of the wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearDodgeChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <MeleeDodgeChance>+0.25</MeleeDodgeChance>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- *** Ranged *** -->
+  <!-- ===================== Aim Chip ==================================== -->
+  <!--
+	public static StatDef AccuracyTouch;
+	public static StatDef AccuracyShort;
+	public static StatDef AccuracyMedium;
+	public static StatDef AccuracyLong;
+	-->
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearAimChip</defName>
+    <label>TC Aim Chip</label>
+    <description>An aiming enhancement chip used in Tactical Charged (TC) Gear.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearAimChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <AccuracyTouch>+0.05</AccuracyTouch>
+          <AccuracyShort>+0.05</AccuracyShort>
+          <AccuracyMedium>+0.04</AccuracyMedium>
+          <AccuracyLong>+0.04</AccuracyLong>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearReflexChip</defName>
+    <label>TC Reflex Chip</label>
+    <description>An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers a more shorter range use, at the expense of longer ranges.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearReflexChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <AccuracyTouch>+0.08</AccuracyTouch>
+          <AccuracyShort>+0.07</AccuracyShort>
+          <AccuracyMedium>0</AccuracyMedium>
+          <AccuracyLong>-0.02</AccuracyLong>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearHunterChip</defName>
+    <label>TC Hunter Chip</label>
+    <description>An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers long range use, at the expense of shorter ranges .</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearHunterChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <AccuracyTouch>0</AccuracyTouch>
+          <AccuracyShort>+0.02</AccuracyShort>
+          <AccuracyMedium>+0.05</AccuracyMedium>
+          <AccuracyLong>+0.10</AccuracyLong>
+          <AimingDelayFactor>+0.05</AimingDelayFactor>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ===================== Boost Chip ================================== -->
+  <!--
+	public static StatDef RangedWeapon_Cooldown;
+	public static StatDef AimingDelayFactor;
+	-->
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearBoostChip</defName>
+    <label>TC Boost Chip</label>
+    <description>A boost enhancement chip used in Tactical Charged (TC) Gear.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearBoostChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <RangedWeapon_Cooldown>-0.2</RangedWeapon_Cooldown>
+          <AimingDelayFactor>-0.25</AimingDelayFactor>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="CGearTCChipBase">
+    <defName>CGearHeatSinkChip</defName>
+    <label>TC Heat Sink Chip</label>
+    <description>A boost enhancement chip used in Tactical Charged (TC) Gear. This chip control heat dispersement well.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CGearHeatSinkChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompSlotLoadable.CompProperties_SlottedBonus">
+        <statModifiers>
+          <RangedWeapon_Cooldown>-0.4</RangedWeapon_Cooldown>
+          <AimingDelayFactor>-0.1</AimingDelayFactor>
+        </statModifiers>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

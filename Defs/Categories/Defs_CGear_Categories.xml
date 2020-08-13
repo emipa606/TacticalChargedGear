@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>TCWeaponsMelee</defName>
+    <label>TC Melee weapons</label>
+    <parent>WeaponsMelee</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>TCWeaponsRanged</defName>
+    <label>TC Ranged weapons</label>
+    <parent>WeaponsRanged</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>TCGrenades</defName>
+    <label>TC Grenades</label>
+    <parent>Grenades</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>TCMortarShells</defName>
+    <label>TC Mortar shells</label>
+    <parent>MortarShells</parent>
+    <iconPath>UI/Icons/ThingCategories/MortarShells</iconPath>
+  </ThingCategoryDef>
+</Defs>

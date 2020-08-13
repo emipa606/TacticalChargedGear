@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Helmet -->
+
+  <Make_Convert_MHelm_CGear.label>Convert Marine Helmet</Make_Convert_MHelm_CGear.label>
+  <Make_Convert_MHelm_CGear.description>Convert a Marine helmet to a TC Helmet</Make_Convert_MHelm_CGear.description>
+  <Make_Convert_MHelm_CGear.jobString>Converting TC Helmet</Make_Convert_MHelm_CGear.jobString>
+
+
+  <!-- Body -->
+
+  <Make_Convert_MArmr_CGear.label>Convert Marine Power Armour</Make_Convert_MArmr_CGear.label>
+  <Make_Convert_MArmr_CGear.description>Convert Marine armour to  TC Armour</Make_Convert_MArmr_CGear.description>
+  <Make_Convert_MArmr_CGear.jobString>Converting TC Armour</Make_Convert_MArmr_CGear.jobString>
+
+
+</LanguageData>
