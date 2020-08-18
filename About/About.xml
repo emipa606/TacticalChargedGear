@@ -24,13 +24,6 @@
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>jecrell.jecstools</li>
-    <li>Dubwise.Rimatomics</li>
-    <li>Mlie.CamouflageandStealth</li>
-    <li>LimeTreeSnake.Community.Ammunition</li>
-    <li>Mlie.GhostGear</li>
-    <li>FlashPoint55.GroundTurretMod</li>
-    <li>LWM.DeepStorage</li>
-    <li>VanillaExpanded.VFEProduction</li>
   </loadAfter>
   <incompatibleWith>
     <li>Ogliss.AdMech.Armoury</li>
