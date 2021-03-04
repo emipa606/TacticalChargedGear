@@ -1,13 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Mortar turret -->
-
   <Turret_CGear_Grenade.label>TC Grenade Mortar</Turret_CGear_Grenade.label>
   <Turret_CGear_Grenade.description>Based on the TC mortar but firing multiple grenades.</Turret_CGear_Grenade.description>
-
   <Artillery_Grenade_CGear.label>TC Grenade Mortar</Artillery_Grenade_CGear.label>
   <Artillery_Grenade_CGear.description>Grenade Mortar. Lobs grenades over walls. Inaccurate but long-ranged.</Artillery_Grenade_CGear.description>
-
-
 </LanguageData>

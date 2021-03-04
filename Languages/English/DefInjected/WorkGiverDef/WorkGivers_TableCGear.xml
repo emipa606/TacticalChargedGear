@@ -1,13 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <CraftCGear.label>Craft Tactical Charge Gear</CraftCGear.label>
   <CraftCGear.verb>Craft</CraftCGear.verb>
   <CraftCGear.gerund>Crafting</CraftCGear.gerund>
-
   <CraftCGearChips.label>Craft TC Chips</CraftCGearChips.label>
   <CraftCGearChips.verb>Craft</CraftCGearChips.verb>
   <CraftCGearChips.gerund>Crafting</CraftCGearChips.gerund>
-
-
 </LanguageData>

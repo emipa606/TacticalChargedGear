@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- EMP Mini-turret -->
-
   <Turret_EMPMiniTurret_CGear.label>TC EMP Mini-turret</Turret_EMPMiniTurret_CGear.label>
   <Turret_EMPMiniTurret_CGear.description>Based on the TC mini-turret, but this turret fires EMP projectiles.</Turret_EMPMiniTurret_CGear.description>
-
   <Bullet_CGear_EMPMiniTurret.label>TC EMP Mini-turret bullet</Bullet_CGear_EMPMiniTurret.label>
-
   <Gun_CGear_EMPMiniTurret.label>TC EMP Mini-turret gun</Gun_CGear_EMPMiniTurret.label>
   <Gun_CGear_EMPMiniTurret.description>A tactical charged emp gun made to be mounted on a turret.</Gun_CGear_EMPMiniTurret.description>
-
-
 </LanguageData>

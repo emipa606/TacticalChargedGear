@@ -1,42 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Grenade -->
-
   <Weapon_TCOrbBombGrenade.label>TC Orbital Bomb Marker</Weapon_TCOrbBombGrenade.label>
   <Weapon_TCOrbBombGrenade.description>Single use launcher that applies marker gas to call in a bombardment.</Weapon_TCOrbBombGrenade.description>
   <Weapon_TCOrbBombGrenade.verbs.0.label>launch marker grenade</Weapon_TCOrbBombGrenade.verbs.0.label>
-
   <Grenade_TCOrbBomb.label>Orbital Bombardment Flare Marker</Grenade_TCOrbBomb.label>
-
-
   <!-- Gas : Thing -->
-
   <Gas_TCBombMark.label>TC Bombardment Marker Gas</Gas_TCBombMark.label>
-
-
   <!-- Bombardment Def -->
-
   <TCBombardment.label>bombardment</TCBombardment.label>
-
-
   <!-- Orb Beam Grenade -->
-
   <Weapon_TCOrbBeamGrenade.label>TC Orbital Beam Marker</Weapon_TCOrbBeamGrenade.label>
   <Weapon_TCOrbBeamGrenade.description>Single use launcher that applies marker gas to call in an orbital beam.</Weapon_TCOrbBeamGrenade.description>
   <Weapon_TCOrbBeamGrenade.verbs.0.label>launch marker grenade</Weapon_TCOrbBeamGrenade.verbs.0.label>
-
   <Grenade_TCOrbBeam.label>Orbital Beam Flare Marker</Grenade_TCOrbBeam.label>
-
-
   <!-- Gas : Thing -->
-
   <Gas_TCBeamMark.label>TC Beam Marker Gas</Gas_TCBeamMark.label>
-
-
   <!-- Beam Def -->
-
   <TCPowerBeam.label>power beam</TCPowerBeam.label>
-
-
 </LanguageData>

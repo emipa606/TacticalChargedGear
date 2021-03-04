@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <TCWeaponsMelee.label>TC Melee weapons</TCWeaponsMelee.label>
   <TCWeaponsRanged.label>TC Ranged weapons</TCWeaponsRanged.label>
   <TCGrenades.label>TC Grenades</TCGrenades.label>
   <TCMortarShells.label>TC Mortar shells</TCMortarShells.label>
-
-
 </LanguageData>
