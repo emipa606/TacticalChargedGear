@@ -23,60 +23,72 @@ namespace TCGear
                 var TCGList = TCGResearchList();
                 foreach (var ResDef in projDefs)
                 {
-                    if (TCGList.Contains(ResDef.defName))
+                    if (!TCGList.Contains(ResDef.defName))
                     {
-                        var Resbase = ResDef.baseCost;
-                        Resbase = checked((int) Math.Round(Resbase * (Controller.Settings.ResPct / 100f)));
-                        ResDef.baseCost = Resbase;
+                        continue;
                     }
+
+                    var Resbase = ResDef.baseCost;
+                    Resbase = checked((int) Math.Round(Resbase * (Controller.Settings.ResPct / 100f)));
+                    ResDef.baseCost = Resbase;
                 }
             }
 
-            if (!Controller.Settings.BarrelReplace)
+            if (Controller.Settings.BarrelReplace)
             {
-                var thingDefs = DefDatabase<ThingDef>.AllDefsListForReading;
-                if (thingDefs.Count > 0)
-                {
-                    foreach (var thingDef in thingDefs)
-                    {
-                        if (thingDef.defName.StartsWith("Gun_CGear"))
-                        {
-                            var turret = false;
-                            if ((thingDef != null ? thingDef.weaponTags : null) != null)
-                            {
-                                var tags = thingDef.weaponTags;
-                                if (tags.Count > 0)
-                                {
-                                    using (var enumerator3 = tags.GetEnumerator())
-                                    {
-                                        while (enumerator3.MoveNext())
-                                        {
-                                            if (enumerator3.Current == "TurretGun")
-                                            {
-                                                turret = true;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                return;
+            }
 
-                            if (turret && (thingDef != null ? thingDef.Verbs : null) != null)
+            var thingDefs = DefDatabase<ThingDef>.AllDefsListForReading;
+            if (thingDefs.Count <= 0)
+            {
+                return;
+            }
+
+            foreach (var thingDef in thingDefs)
+            {
+                if (!thingDef.defName.StartsWith("Gun_CGear"))
+                {
+                    continue;
+                }
+
+                var turret = false;
+                if (thingDef.weaponTags != null)
+                {
+                    var tags = thingDef.weaponTags;
+                    if (tags.Count > 0)
+                    {
+                        using var enumerator3 = tags.GetEnumerator();
+                        while (enumerator3.MoveNext())
+                        {
+                            if (enumerator3.Current == "TurretGun")
                             {
-                                var list = thingDef.Verbs;
-                                if (list.Count > 0)
-                                {
-                                    foreach (var VP in list)
-                                    {
-                                        if (VP != null)
-                                        {
-                                            var consumeFuelPerShot = VP.consumeFuelPerShot;
-                                            VP.consumeFuelPerShot = 0f;
-                                        }
-                                    }
-                                }
+                                turret = true;
                             }
                         }
                     }
+                }
+
+                if (!turret || thingDef.Verbs == null)
+                {
+                    continue;
+                }
+
+                var list = thingDef.Verbs;
+                if (list.Count <= 0)
+                {
+                    continue;
+                }
+
+                foreach (var VP in list)
+                {
+                    if (VP == null)
+                    {
+                        continue;
+                    }
+
+                    var unused = VP.consumeFuelPerShot;
+                    VP.consumeFuelPerShot = 0f;
                 }
             }
         }

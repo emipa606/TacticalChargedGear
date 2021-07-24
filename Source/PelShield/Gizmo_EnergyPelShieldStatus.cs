@@ -31,7 +31,7 @@ namespace PelShield
         }
 
         // Token: 0x06000003 RID: 3 RVA: 0x0000206C File Offset: 0x0000026C
-        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth)
+        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
             var overRect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
             Find.WindowStack.ImmediateWindow(984688, overRect, 0, delegate

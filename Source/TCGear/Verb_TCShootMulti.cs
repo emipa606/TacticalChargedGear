@@ -14,20 +14,22 @@ namespace TCGear
         public override void WarmupComplete()
         {
             base.WarmupComplete();
-            var pawn = currentTarget.Thing as Pawn;
-            if (pawn != null && !pawn.Downed && base.CasterIsPawn && base.CasterPawn.skills != null)
+            if (currentTarget.Thing is not Pawn pawn || pawn.Downed || !base.CasterIsPawn ||
+                base.CasterPawn.skills == null)
             {
-                var num = !pawn.HostileTo(caster) ? 20f : 170f;
-                var num2 = verbProps.AdjustedFullCycleTime(this, base.CasterPawn);
-                base.CasterPawn.skills.Learn(SkillDefOf.Shooting, num * num2);
+                return;
             }
+
+            var num = !pawn.HostileTo(caster) ? 20f : 170f;
+            var num2 = verbProps.AdjustedFullCycleTime(this, base.CasterPawn);
+            base.CasterPawn.skills.Learn(SkillDefOf.Shooting, num * num2);
         }
 
         // Token: 0x06000033 RID: 51 RVA: 0x00003034 File Offset: 0x00001234
         protected override bool TryCastShot()
         {
             var count = 0;
-            var flag = false;
+            var tryCastShot = false;
             if (EquipmentSource != null)
             {
                 var loaded = EquipmentSource.GetComp<CompChangeableProjectile>().loadedCount;
@@ -41,16 +43,18 @@ namespace TCGear
 
             while (count < ShotsPerBurst)
             {
-                flag = base.TryCastShot();
-                if (!flag)
+                tryCastShot = base.TryCastShot();
+                if (!tryCastShot)
                 {
-                    if (count > 0)
+                    if (count <= 0)
                     {
-                        EquipmentSource.GetComp<CompChangeableProjectile>().loadedCount = 0;
-                        burstShotsLeft = 0;
+                        return false;
                     }
 
-                    return flag;
+                    EquipmentSource.GetComp<CompChangeableProjectile>().loadedCount = 0;
+                    burstShotsLeft = 0;
+
+                    return false;
                 }
 
                 count++;
@@ -58,12 +62,12 @@ namespace TCGear
             }
 
             burstShotsLeft = 0;
-            if (flag && base.CasterIsPawn)
+            if (tryCastShot && base.CasterIsPawn)
             {
                 base.CasterPawn.records.Increment(RecordDefOf.ShotsFired);
             }
 
-            return flag;
+            return tryCastShot;
         }
     }
 }

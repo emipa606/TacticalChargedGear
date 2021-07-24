@@ -30,28 +30,32 @@ namespace TCGear
             }
 
             graphicRotation += graphicRotationSpeed;
+            if (this.DestroyedOrNull())
+            {
+                return;
+            }
+
+            var TargetMap = Map;
+            var TargetCell = Position;
+            if (Find.TickManager.TicksGame % 10 == 0)
+            {
+                FleckMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), TargetMap, 1f);
+            }
+
+            if (Find.TickManager.TicksGame % 300 != 0)
+            {
+                return;
+            }
+
+            var tcpowerBeam = (TCPowerBeam) GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("TCPowerBeam"),
+                TargetCell, TargetMap);
+            tcpowerBeam.duration = 120;
+            tcpowerBeam.instigator = this;
+            tcpowerBeam.weaponDef = ThingDefOf.OrbitalTargeterPowerBeam;
+            tcpowerBeam.StartStrike();
             if (!this.DestroyedOrNull())
             {
-                var TargetMap = Map;
-                var TargetCell = Position;
-                if (Find.TickManager.TicksGame % 10 == 0)
-                {
-                    MoteMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), TargetMap, 1f);
-                }
-
-                if (Find.TickManager.TicksGame % 300 == 0)
-                {
-                    var tcpowerBeam = (TCPowerBeam) GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("TCPowerBeam"),
-                        TargetCell, TargetMap);
-                    tcpowerBeam.duration = 120;
-                    tcpowerBeam.instigator = this;
-                    tcpowerBeam.weaponDef = ThingDefOf.OrbitalTargeterPowerBeam;
-                    tcpowerBeam.StartStrike();
-                    if (!this.DestroyedOrNull())
-                    {
-                        Destroy();
-                    }
-                }
+                Destroy();
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Tactical Charged Gear (Continued)</name>
   <packageId>Mlie.TacticalChargedGear</packageId>
@@ -7,6 +7,7 @@
   <supportedVersions>
     <li>1.1</li>
     <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -67,7 +68,7 @@ Power Chip: Overclocking enhancement chip for melee weapons. (Slight improvement
 Reflex Chip: Tunes aiming characteristics for short range.
 Hunter Chip: Tunes aiming characteristics for long range.
 
-Heatsink Chip: Provides greater heating control with the weapon. Better "cooldown" characteristics.
+Heatsink Chip: Provides greater heating control with the weapon. Better &quot;cooldown&quot; characteristics.
 
 Dodge Chip: Provides an extra 10% dodge chance in melee.
 
@@ -110,13 +111,13 @@ Grenade Mortar magazines: EMP, Flashbang, Fragmentation, Incendiary and Smoke.
 
 [h1]Additional Mod Notes[/h1]
 
-I have been using TC Gear for a while as it has been developed so am fairly confident with the functional testing and partial balancing of the tech as a late game introduction. I haven't of course been able to cover extensively all environments and scenarios with usage, so am fairly mutable with the idea of "fine-tuning" the items to find the "best balance" for the items in their given tech setting (whilst considering difficulties). I would like to provide items that are considered as an assistance to the player as a late game item but not simply too OP that it removes the challenge and enjoyment from the game in the process. With this in mind I have provided a specific discussion topic for this purpose.
+I have been using TC Gear for a while as it has been developed so am fairly confident with the functional testing and partial balancing of the tech as a late game introduction. I haven&apos;t of course been able to cover extensively all environments and scenarios with usage, so am fairly mutable with the idea of &quot;fine-tuning&quot; the items to find the &quot;best balance&quot; for the items in their given tech setting (whilst considering difficulties). I would like to provide items that are considered as an assistance to the player as a late game item but not simply too OP that it removes the challenge and enjoyment from the game in the process. With this in mind I have provided a specific discussion topic for this purpose.
 
-The toolbox is only a "one" tile item that can also be used as a shelf (storage) and has been additionally made capable for use with relevant vanilla benches and other mod benches that also attach the vanilla toolbox as a facility.
+The toolbox is only a &quot;one&quot; tile item that can also be used as a shelf (storage) and has been additionally made capable for use with relevant vanilla benches and other mod benches that also attach the vanilla toolbox as a facility.
 
 Not all details have been or will be provided for the items as firstly there is too much to sensibly add and secondly, part of the fun of playing with new tech items is to discover their capabilities. I have simply provided sufficient information here for players to have a good general overview of what TC Gear provides. 
 
-This mod has a "slottable" chip enhancement process for the weapons using "JecsTools" as a required base mod. This needs to be loaded after the core mod elements and before this mod itself in the mod ordering. Note the slottable chips have an intentional stack size of one due to limitations in how "JecsTools" take these items from stacks when slotting the items.
+This mod has a &quot;slottable&quot; chip enhancement process for the weapons using &quot;JecsTools&quot; as a required base mod. This needs to be loaded after the core mod elements and before this mod itself in the mod ordering. Note the slottable chips have an intentional stack size of one due to limitations in how &quot;JecsTools&quot; take these items from stacks when slotting the items.
 
 Research techs after Charged Shot (own tab).
 
@@ -163,6 +164,6 @@ Graphics Revision - Oleg Marko
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
+
 </description>
 </ModMetaData>
-

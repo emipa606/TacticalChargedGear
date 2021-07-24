@@ -219,7 +219,7 @@ namespace PelShield
 
             var apparel3 = apparel.def.apparel;
             var tags = apparel3?.tags;
-            if (tags != null && tags.Count <= 0)
+            if (tags is {Count: <= 0})
             {
                 return false;
             }
@@ -229,14 +229,12 @@ namespace PelShield
                 return false;
             }
 
-            using (var enumerator = tags.GetEnumerator())
+            using var enumerator = tags.GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                while (enumerator.MoveNext())
+                if (enumerator.Current == "PelRegenFromShield")
                 {
-                    if (enumerator.Current == "PelRegenFromShield")
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
 
@@ -298,11 +296,11 @@ namespace PelShield
             impactAngleVect = Vector3Utility.HorizontalVectorFromAngle(dinfo.Angle);
             var loc = wearer.TrueCenter() + (impactAngleVect.RotatedBy(180f) * 0.5f);
             var num = Mathf.Min(10f, 2f + (dinfo.Amount / 10f));
-            MoteMaker.MakeStaticMote(loc, wearer.Map, ThingDefOf.Mote_ExplosionFlash, num);
+            FleckMaker.Static(loc, wearer.Map, FleckDefOf.ExplosionFlash, num);
             var num2 = (int) num;
             for (var i = 0; i < num2; i++)
             {
-                MoteMaker.ThrowDustPuff(loc, wearer.Map, Rand.Range(0.8f, 1.2f));
+                FleckMaker.ThrowDustPuff(loc, wearer.Map, Rand.Range(0.8f, 1.2f));
             }
 
             lastAbsorbDamageTick = Find.TickManager.TicksGame;
@@ -314,10 +312,10 @@ namespace PelShield
         {
             var wearer = Wearer;
             SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
-            MoteMaker.MakeStaticMote(wearer.TrueCenter(), wearer.Map, ThingDefOf.Mote_ExplosionFlash, 12f);
+            FleckMaker.Static(wearer.TrueCenter(), wearer.Map, FleckDefOf.ExplosionFlash, 12f);
             for (var i = 0; i < 6; i++)
             {
-                MoteMaker.ThrowDustPuff(
+                FleckMaker.ThrowDustPuff(
                     wearer.TrueCenter() + (Vector3Utility.HorizontalVectorFromAngle(Rand.Range(0, 360)) *
                                            Rand.Range(0.3f, 0.6f)), wearer.Map, Rand.Range(0.8f, 1.2f));
             }
@@ -333,7 +331,7 @@ namespace PelShield
             if (wearer.Spawned)
             {
                 SoundDefOf.EnergyShield_Reset.PlayOneShot(new TargetInfo(wearer.Position, wearer.Map));
-                MoteMaker.ThrowLightningGlow(wearer.TrueCenter(), wearer.Map, 3f);
+                FleckMaker.ThrowLightningGlow(wearer.TrueCenter(), wearer.Map, 3f);
             }
 
             ticksToReset = -1;
@@ -368,7 +366,7 @@ namespace PelShield
         }
 
         // Token: 0x06000019 RID: 25 RVA: 0x000027FF File Offset: 0x000009FF
-        public override bool AllowVerbCast(IntVec3 root, Map map, LocalTargetInfo targ, Verb v)
+        public override bool AllowVerbCast(Verb v)
         {
             return true;
         }

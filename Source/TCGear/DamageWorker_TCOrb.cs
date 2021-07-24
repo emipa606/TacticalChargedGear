@@ -17,9 +17,9 @@ namespace TCGear
                     def.explosionHeatEnergyPerCell * cellsToAffect.Count);
             }
 
-            MoteMaker.MakeStaticMote(explosion.Position, explosion.Map, ThingDefOf.Mote_ExplosionFlash,
+            FleckMaker.Static(explosion.Position, explosion.Map, FleckDefOf.ExplosionFlash,
                 explosion.radius * 6f);
-            MoteMaker.MakeStaticMote(explosion.Position, explosion.Map, ThingDefOf.Mote_ExplosionFlash,
+            FleckMaker.Static(explosion.Position, explosion.Map, FleckDefOf.ExplosionFlash,
                 explosion.radius * 6f);
             ExplosionVisualEffectCenter(explosion);
         }
@@ -28,17 +28,21 @@ namespace TCGear
         public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
             var damageResult = new DamageResult();
-            if (victim.def.category == ThingCategory.Pawn && victim.def.useHitPoints && dinfo.Def.harmsHealth)
+            if (victim.def.category != ThingCategory.Pawn || !victim.def.useHitPoints || !dinfo.Def.harmsHealth)
             {
-                var num = dinfo.Amount;
-                damageResult.totalDamageDealt = Mathf.Min(victim.HitPoints, GenMath.RoundRandom(num));
-                victim.HitPoints -= Mathf.RoundToInt(damageResult.totalDamageDealt);
-                if (victim.HitPoints <= 0)
-                {
-                    victim.HitPoints = 0;
-                    victim.Kill(dinfo);
-                }
+                return damageResult;
             }
+
+            var num = dinfo.Amount;
+            damageResult.totalDamageDealt = Mathf.Min(victim.HitPoints, GenMath.RoundRandom(num));
+            victim.HitPoints -= Mathf.RoundToInt(damageResult.totalDamageDealt);
+            if (victim.HitPoints > 0)
+            {
+                return damageResult;
+            }
+
+            victim.HitPoints = 0;
+            victim.Kill(dinfo);
 
             return damageResult;
         }

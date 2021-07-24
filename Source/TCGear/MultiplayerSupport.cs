@@ -27,9 +27,9 @@ namespace TCGear
                 AccessTools.Method(typeof(TCBombardment), "CreateRandomExplosion"),
                 AccessTools.Method(typeof(TCBombardment), "StartRandomFire")
             };
-            for (var i = 0; i < array.Length; i++)
+            foreach (var methodInfo in array)
             {
-                FixRNG(array[i]);
+                FixRNG(methodInfo);
             }
         }
 

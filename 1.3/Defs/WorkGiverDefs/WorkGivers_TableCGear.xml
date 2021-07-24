@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkGiverDef>
+    <defName>CraftCGear</defName>
+    <label>Craft Tactical Charge Gear</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableCGear</li>
+    </fixedBillGiverDefs>
+    <verb>Craft</verb>
+    <gerund>Crafting</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>CraftCGearChips</defName>
+    <label>Craft TC Chips</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>49</priorityInType>
+    <fixedBillGiverDefs>
+      <li>CGearChipStand</li>
+    </fixedBillGiverDefs>
+    <verb>Craft</verb>
+    <gerund>Crafting</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

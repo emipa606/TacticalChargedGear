@@ -24,35 +24,39 @@ namespace TCGear
         }
 
         // Token: 0x06000003 RID: 3 RVA: 0x000020AF File Offset: 0x000002AF
-        public override void CompTickRare()
-        {
-            base.CompTickRare();
-        }
 
         // Token: 0x06000004 RID: 4 RVA: 0x000020B8 File Offset: 0x000002B8
         public void DoRepair(Thing rep)
         {
-            if (rep.Spawned && IsActive(rep))
+            if (!rep.Spawned || !IsActive(rep))
             {
-                var things = rep.Position.GetThingList(rep.Map);
-                if (things.Count > 0)
+                return;
+            }
+
+            var things = rep.Position.GetThingList(rep.Map);
+            if (things.Count <= 0)
+            {
+                return;
+            }
+
+            foreach (var thing in things)
+            {
+                if (!thing.def.useHitPoints || thing == rep || !validThingForRep(thing))
                 {
-                    foreach (var thing in things)
-                    {
-                        if (thing.def.useHitPoints && thing != rep && validThingForRep(thing))
-                        {
-                            var max = thing.MaxHitPoints;
-                            var repair = (int) (max * (Controller.Settings.RepPct / 100f));
-                            if (repair > 0 && thing.HitPoints < max)
-                            {
-                                thing.HitPoints += repair;
-                                if (thing.HitPoints >= max)
-                                {
-                                    thing.HitPoints = max;
-                                }
-                            }
-                        }
-                    }
+                    continue;
+                }
+
+                var max = thing.MaxHitPoints;
+                var repair = (int) (max * (Controller.Settings.RepPct / 100f));
+                if (repair <= 0 || thing.HitPoints >= max)
+                {
+                    continue;
+                }
+
+                thing.HitPoints += repair;
+                if (thing.HitPoints >= max)
+                {
+                    thing.HitPoints = max;
                 }
             }
         }
@@ -60,22 +64,20 @@ namespace TCGear
         // Token: 0x06000005 RID: 5 RVA: 0x0000219C File Offset: 0x0000039C
         public bool validThingForRep(Thing thing)
         {
-            var result = false;
-            return thing.def.IsWeapon || thing.def.IsApparel || thing.def.IsShell || result;
+            return thing.def.IsWeapon || thing.def.IsApparel || thing.def.IsShell;
         }
 
         // Token: 0x06000006 RID: 6 RVA: 0x000021DC File Offset: 0x000003DC
         public bool IsActive(Thing rep)
         {
-            var result = true;
             var CPT = rep.TryGetComp<CompPowerTrader>();
-            return (CPT == null || CPT.PowerOn) && !rep.IsBrokenDown() && result;
+            return (CPT == null || CPT.PowerOn) && !rep.IsBrokenDown();
         }
 
         // Token: 0x06000007 RID: 7 RVA: 0x0000220C File Offset: 0x0000040C
         public override string CompInspectStringExtra()
         {
-            return TranslatorFormattedStringExtensions.Translate("TCGear.FBack", Controller.Settings.RepPct.ToString(),
+            return "TCGear.FBack".Translate(Controller.Settings.RepPct.ToString(),
                 1f.ToString("F2"));
         }
     }

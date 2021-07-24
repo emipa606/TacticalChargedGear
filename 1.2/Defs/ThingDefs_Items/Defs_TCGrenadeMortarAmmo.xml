@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>TCGrenadeMortarAmmo</defName>
+    <label>TC Ammo Grenade Mortar</label>
+    <parent>MortarShells</parent>
+  </ThingCategoryDef>
+  <ThingDef Name="TCGrdShellBase" ParentName="ResourceBase" Abstract="True">
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>55</MarketValue>
+      <Mass>1.25</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+    </statBases>
+    <thingCategories Inherit="false">
+      <li>TCGrenadeMortarAmmo</li>
+    </thingCategories>
+    <tradeTags>
+      <li>MortarShell</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef Name="MakeableCGearGrdShellBase" ParentName="TCGrdShellBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <workAmount>500</workAmount>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workSkill>Crafting</workSkill>
+      <researchPrerequisite>CGearTech_Turrets</researchPrerequisite>
+      <recipeUsers>
+        <li>TableCGear</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>600</MarketValue>
+    </statBases>
+  </ThingDef>
+  <!-- Frag -->
+  <ThingDef ParentName="MakeableCGearGrdShellBase">
+    <defName>Ammo_CGear_GrdFrag</defName>
+    <label>TC Frag Ammo Grenade Mortar</label>
+    <description>A specialised magazine loaded with TC frag grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>757.5</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdFrag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <wickTicks Inherit="false">
+          <min>50</min>
+          <max>100</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Proj_CGear_MortarGrenadeFrag</projectileWhenLoaded>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>65</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Proj_CGear_MortarGrenadeFrag</defName>
+    <label>TC Frag grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFrag</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>51</speed>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>70</damageAmountBase>
+      <explosionDelay>80</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Smoke -->
+  <ThingDef ParentName="MakeableCGearGrdShellBase">
+    <defName>Ammo_CGear_GrdSmoke</defName>
+    <label>TC Smoke Ammo Grenade Mortar</label>
+    <description>A specialised magazine loaded with TC smoke grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>757.5</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdSmoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>Smoke</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <wickTicks Inherit="false">
+          <min>50</min>
+          <max>100</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Proj_CGear_MortarGrenadeSmoke</projectileWhenLoaded>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>65</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Proj_CGear_MortarGrenadeSmoke</defName>
+    <label>TC Smoke grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeSmoke</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>51</speed>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>Smoke</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionDelay>20</explosionDelay>
+      <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  <!-- Flashbang -->
+  <ThingDef ParentName="MakeableCGearGrdShellBase">
+    <defName>Ammo_CGear_GrdFlashbang</defName>
+    <label>TC Flashbang Ammo Grenade Mortar</label>
+    <description>A specialised magazine loaded with TC flashbang grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>774.8</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdFlashbang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>Stun</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <wickTicks Inherit="false">
+          <min>50</min>
+          <max>100</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Proj_CGear_MortarGrenadeFlashBang</projectileWhenLoaded>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>80</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Proj_CGear_MortarGrenadeFlashBang</defName>
+    <label>TC Flashbang grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFlashBang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>51</speed>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- EMP -->
+  <ThingDef ParentName="MakeableCGearGrdShellBase">
+    <defName>Ammo_CGear_GrdEMP</defName>
+    <label>TC EMP Ammo Grenade Mortar</label>
+    <description>A specialised magazine loaded with TC EMP grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>821.5</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdEMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>EMP</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <wickTicks Inherit="false">
+          <min>50</min>
+          <max>100</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Proj_CGear_MortarGrenadeEMP</projectileWhenLoaded>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>65</Chemfuel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Proj_CGear_MortarGrenadeEMP</defName>
+    <label>TC EMP grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeEMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>51</speed>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius>4.9</explosionRadius>
+      <damageDef>EMP</damageDef>
+      <!-- default damage -->
+      <explosionDelay>50</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Flame -->
+  <ThingDef ParentName="MakeableCGearGrdShellBase">
+    <defName>Ammo_CGear_GrdFlame</defName>
+    <label>TC Incendiary Ammo Grenade Mortar</label>
+    <description>A specialised magazine loaded with TC incendiary grenades for use in the TC Grenade Mortar. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>895.5</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ammo_CGear_Grd/Ammo_CGear_GrdFlame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <wickTicks Inherit="false">
+          <min>50</min>
+          <max>100</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <projectileWhenLoaded>Proj_CGear_MortarGrenadeFlame</projectileWhenLoaded>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <Chemfuel>125</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Proj_CGear_MortarGrenadeFlame</defName>
+    <label>TC Incendiary grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CGear_GrenadeFlame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>51</speed>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius>3.9</explosionRadius>
+      <damageDef>Flame</damageDef>
+      <!-- default damage -->
+      <explosionDelay>20</explosionDelay>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+</Defs>

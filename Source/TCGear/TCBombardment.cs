@@ -52,24 +52,26 @@ namespace TCGear
         public override void Tick()
         {
             base.Tick();
-            if (!Destroyed)
+            if (Destroyed)
             {
-                if (Find.TickManager.TicksGame % 28 == 0)
-                {
-                    CreateRandomExplosion();
-                }
+                return;
+            }
 
-                if (Find.TickManager.TicksGame % 30 == 0)
-                {
-                    StartRandomFire();
-                }
+            if (Find.TickManager.TicksGame % 28 == 0)
+            {
+                CreateRandomExplosion();
+            }
+
+            if (Find.TickManager.TicksGame % 30 == 0)
+            {
+                StartRandomFire();
             }
         }
 
         // Token: 0x06000019 RID: 25 RVA: 0x000026F4 File Offset: 0x000008F4
         public void CreateRandomExplosion()
         {
-            var def = this.def;
+            var thingDef = def;
             var TCBombDmg = 40;
             var TCBombRad = 12;
             var TCBombMinBlast = 5;
@@ -79,17 +81,16 @@ namespace TCGear
                 select x).RandomElementByWeight(x => DistanceChanceFactor.Evaluate(x.DistanceTo(Position)));
             var num = (float) Rand.Range(TCBombMinBlast, TCBombMaxBlast);
             var map = Map;
-            var radius = num;
             var bomb = DamageDefOf.Bomb;
-            var instigator = this.instigator;
-            var weaponDef = this.weaponDef;
-            GenExplosion.DoExplosion(intVec, map, radius, bomb, instigator, TCBombDmg, -1f, null, weaponDef, def);
+            var thing = instigator;
+            var weapon = weaponDef;
+            GenExplosion.DoExplosion(intVec, map, num, bomb, thing, TCBombDmg, -1f, null, weapon, thingDef);
         }
 
         // Token: 0x0600001A RID: 26 RVA: 0x000027AC File Offset: 0x000009AC
         public void StartRandomFire()
         {
-            var def = this.def;
+            var unused = def;
             var TCFireRad = 15;
             FireUtility.TryStartFireIn((from x in GenRadial.RadialCellsAround(Position, TCFireRad, true)
                     where x.InBounds(Map)

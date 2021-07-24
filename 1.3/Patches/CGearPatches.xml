@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ======== Additional bench use ========== -->
+  <!-- ========== Electric Smelter ============= -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="ElectricSmelter"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities[li = 'TCToolCabinet']</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ElectricSmelter"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities</xpath>
+        <value>
+          <li>TCToolCabinet</li>
+        </value>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ElectricSmelter"]/comps</xpath>
+        <value>
+          <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities>
+              <li>TCToolCabinet</li>
+            </linkableFacilities>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!-- =========== Biofuel Refinery ============== -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities[li = 'TCToolCabinet']</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities</xpath>
+        <value>
+          <li>TCToolCabinet</li>
+        </value>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/comps</xpath>
+        <value>
+          <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities>
+              <li>TCToolCabinet</li>
+            </linkableFacilities>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!-- ========== Drug Lab ================= -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="DrugLab"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities[li = 'TCToolCabinet']</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="DrugLab"]/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities</xpath>
+        <value>
+          <li>TCToolCabinet</li>
+        </value>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="DrugLab"]/comps</xpath>
+        <value>
+          <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities>
+              <li>TCToolCabinet</li>
+            </linkableFacilities>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!-- ======== Add TC Cabinet to existing bench toolbox users ====================== -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef/comps/li[@Class='CompProperties_AffectedByFacilities']/linkableFacilities[li = 'ToolCabinet']</xpath>
+        <value>
+          <li>TCToolCabinet</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!-- ======= if Rimatomics is present, add radiation bonus to power armour =============== -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rimatomics</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Apparel_PowerArmorCGearHelmet"]/equippedStatOffsets</xpath>
+      <value>
+        <Radiation>-0.33</Radiation>
+      </value>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>CGearTab</defName>
+    <label>Tactical Charged Gear</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>CGearTech</defName>
+    <label>Tactical Charged Gear</label>
+    <description>Grants the ability to make computerised charged items.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChargedShot</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTech_Armour</defName>
+    <label>TC Armour</label>
+    <description>Grants the ability to make computerised charged armour.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>PoweredArmor</li>
+      <li>CGearTech</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTech_Turrets</defName>
+    <label>TC Turrets</label>
+    <description>Allows the ability to make computerised charged turrets.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>GunTurrets</li>
+      <li>Mortars</li>
+      <li>IEDs</li>
+      <li>CGearTech</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTechEnhance</defName>
+    <label>TC Gear Enhancements</label>
+    <description>Grants the ability to enhance computerised charged items.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>CGearTech</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTechSpecialist</defName>
+    <label>TC Gear Specialization</label>
+    <description>Grants the ability to specialise computerised charged items.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>CGearTechEnhance</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTech_AdvGrd</defName>
+    <label>TC Gear Explosives</label>
+    <description>Grants the ability to make specialized explosives.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>CGearTech</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTech_AdvShells</defName>
+    <label>TC Gear Adv. Shells</label>
+    <description>Grants the ability to make advanced shells and IDEs.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>CGearTech_AdvGrd</li>
+      <li>CGearTech_Turrets</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>CGearTechTPC</defName>
+    <label>Tactical Cannons</label>
+    <description>Grants the ability to make TC Cannons.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>CGearTechEnhance</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>CGearTab</tab>
+  </ResearchProjectDef>
+</Defs>

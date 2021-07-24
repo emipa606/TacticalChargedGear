@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Damage Def -->
+  <DamageDef>
+    <defName>Dam_TCOrb</defName>
+    <label>TC Orbital</label>
+    <workerClass>TCGear.DamageWorker_TCOrb</workerClass>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>0</defaultDamage>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <harmsHealth>false</harmsHealth>
+    <combatLogRules>Damage_Extinguish</combatLogRules>
+  </DamageDef>
+  <!-- Base elements -->
+  <ThingDef Name="BaseTCOrbMakeableGrenade" ParentName="BaseWeapon" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="false">
+        <li>TableCGear</li>
+      </recipeUsers>
+      <researchPrerequisite>CGearTech_AdvGrd</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <tickerType>Normal</tickerType>
+    <techLevel>Ultra</techLevel>
+    <weaponTags Inherit="false">
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories Inherit="false">
+      <li>TCGrenades</li>
+    </thingCategories>
+    <generateCommonality>0.0001</generateCommonality>
+  </ThingDef>
+  <ThingDef Name="BaseTCOrbGrenadeProjectile" Abstract="True">
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>12</speed>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+  </ThingDef>
+  <!-- Grenade -->
+  <ThingDef ParentName="BaseTCOrbMakeableGrenade">
+    <defName>Weapon_TCOrbBombGrenade</defName>
+    <label>TC Orbital Bomb Marker</label>
+    <description>Single use launcher that applies marker gas to call in a bombardment.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/TCOrbGrenades/Weapon_TCOrbBombGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>1.0</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.5</SellPriceFactor>
+      <MarketValue>432</MarketValue>
+    </statBases>
+    <costList>
+      <Chemfuel>10</Chemfuel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <label>launch marker grenade</label>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Grenade_TCOrbBomb</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>30</range>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>ThrowGrenade</soundCast>
+        <!-- <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack> -->
+        <ai_AvoidFriendlyFireRadius>23</ai_AvoidFriendlyFireRadius>
+        <minRange>23</minRange>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseTCOrbGrenadeProjectile">
+    <defName>Grenade_TCOrbBomb</defName>
+    <label>Orbital Bombardment Flare Marker</label>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade_TCOrbBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Dam_TCOrb</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>40</speed>
+      <explosionRadius>0.1</explosionRadius>
+      <flyOverhead>false</flyOverhead>
+      <soundExplode>DispensePaste</soundExplode>
+      <postExplosionSpawnThingDef>Gas_TCBombMark</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+      <explosionDelay>50</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Gas : Thing -->
+  <ThingDef ParentName="BaseGas">
+    <defName>Gas_TCBombMark</defName>
+    <label>TC Bombardment Marker Gas</label>
+    <graphicData>
+      <texPath>Things/TCFlare</texPath>
+      <drawSize>0.1</drawSize>
+      <!-- <color>(0.87,0.4,0.06,0.5)</color> -->
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>25</min>
+        <max>30</max>
+      </expireSeconds>
+      <blockTurretTracking>true</blockTurretTracking>
+      <accuracyPenalty>0.5</accuracyPenalty>
+      <rotationSpeed>10</rotationSpeed>
+    </gas>
+    <thingClass>TCGear.TCOrbitalBomb</thingClass>
+  </ThingDef>
+  <!-- Bombardment Def -->
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>TCBombardment</defName>
+    <label>bombardment</label>
+    <thingClass>TCGear.TCBombardment</thingClass>
+    <comps>
+      <li Class="CompProperties_OrbitalBeam">
+        <width>0.3</width>
+        <color>(222, 102, 16, 242)</color>
+        <sound>OrbitalBeamSubtle</sound>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- Orb Beam Grenade -->
+  <ThingDef ParentName="BaseTCOrbMakeableGrenade">
+    <defName>Weapon_TCOrbBeamGrenade</defName>
+    <label>TC Orbital Beam Marker</label>
+    <description>Single use launcher that applies marker gas to call in an orbital beam.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/TCOrbGrenades/Weapon_TCOrbBeamGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>1.0</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.5</SellPriceFactor>
+      <MarketValue>432</MarketValue>
+    </statBases>
+    <costList>
+      <Chemfuel>10</Chemfuel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <label>launch marker grenade</label>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Grenade_TCOrbBeam</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>30</range>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>ThrowGrenade</soundCast>
+        <!-- <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack> -->
+        <ai_AvoidFriendlyFireRadius>23</ai_AvoidFriendlyFireRadius>
+        <minRange>23</minRange>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseTCOrbGrenadeProjectile">
+    <defName>Grenade_TCOrbBeam</defName>
+    <label>Orbital Beam Flare Marker</label>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade_TCOrbBeam</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Dam_TCOrb</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>40</speed>
+      <explosionRadius>0.1</explosionRadius>
+      <flyOverhead>false</flyOverhead>
+      <soundExplode>DispensePaste</soundExplode>
+      <postExplosionSpawnThingDef>Gas_TCBeamMark</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+      <explosionDelay>50</explosionDelay>
+    </projectile>
+  </ThingDef>
+  <!-- Gas : Thing -->
+  <ThingDef ParentName="BaseGas">
+    <defName>Gas_TCBeamMark</defName>
+    <label>TC Beam Marker Gas</label>
+    <graphicData>
+      <texPath>Things/TCFlare</texPath>
+      <drawSize>0.1</drawSize>
+      <!-- <color>(0.87,0.4,0.06,0.5)</color> -->
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>25</min>
+        <max>30</max>
+      </expireSeconds>
+      <blockTurretTracking>true</blockTurretTracking>
+      <accuracyPenalty>0.5</accuracyPenalty>
+      <rotationSpeed>10</rotationSpeed>
+    </gas>
+    <thingClass>TCGear.TCOrbitalBeam</thingClass>
+  </ThingDef>
+  <!-- Beam Def -->
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>TCPowerBeam</defName>
+    <label>power beam</label>
+    <thingClass>TCGear.TCPowerBeam</thingClass>
+    <comps>
+      <li Class="CompProperties_OrbitalBeam">
+        <width>4</width>
+        <color>(234, 236, 202, 242)</color>
+        <sound>OrbitalBeam</sound>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

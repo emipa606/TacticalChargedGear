@@ -30,28 +30,32 @@ namespace TCGear
             }
 
             graphicRotation += graphicRotationSpeed;
+            if (this.DestroyedOrNull())
+            {
+                return;
+            }
+
+            var TargetMap = Map;
+            var TargetCell = Position;
+            if (Find.TickManager.TicksGame % 10 == 0)
+            {
+                FleckMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), TargetMap, 1f);
+            }
+
+            if (Find.TickManager.TicksGame % 300 != 0)
+            {
+                return;
+            }
+
+            var tcbombardment = (TCBombardment) GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("TCBombardment"),
+                TargetCell, TargetMap);
+            tcbombardment.duration = 120;
+            tcbombardment.instigator = this;
+            tcbombardment.weaponDef = ThingDefOf.OrbitalTargeterBombardment;
+            tcbombardment.StartStrike();
             if (!this.DestroyedOrNull())
             {
-                var TargetMap = Map;
-                var TargetCell = Position;
-                if (Find.TickManager.TicksGame % 10 == 0)
-                {
-                    MoteMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), TargetMap, 1f);
-                }
-
-                if (Find.TickManager.TicksGame % 300 == 0)
-                {
-                    var tcbombardment = (TCBombardment) GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("TCBombardment"),
-                        TargetCell, TargetMap);
-                    tcbombardment.duration = 120;
-                    tcbombardment.instigator = this;
-                    tcbombardment.weaponDef = ThingDefOf.OrbitalTargeterBombardment;
-                    tcbombardment.StartStrike();
-                    if (!this.DestroyedOrNull())
-                    {
-                        Destroy();
-                    }
-                }
+                Destroy();
             }
         }
     }

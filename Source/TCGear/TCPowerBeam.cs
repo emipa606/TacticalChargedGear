@@ -34,14 +34,16 @@ namespace TCGear
         public override void Tick()
         {
             base.Tick();
-            if (!Destroyed)
+            if (Destroyed)
             {
-                var TCBeamDef = def;
-                var NumFires = 5;
-                for (var i = 0; i < NumFires; i++)
-                {
-                    StartRandomFireAndDoFlameDamage(TCBeamDef);
-                }
+                return;
+            }
+
+            var TCBeamDef = def;
+            var NumFires = 5;
+            for (var i = 0; i < NumFires; i++)
+            {
+                StartRandomFireAndDoFlameDamage(TCBeamDef);
             }
         }
 
@@ -55,9 +57,9 @@ namespace TCGear
             FireUtility.TryStartFireIn(c, Map, Rand.Range(0.1f, 0.5f));
             tmpThings.Clear();
             tmpThings.AddRange(c.GetThingList(Map));
-            for (var i = 0; i < tmpThings.Count; i++)
+            foreach (var thing1 in tmpThings)
             {
-                var num = !(tmpThings[i] is Corpse)
+                var num = !(thing1 is Corpse)
                     ? FlameDamageAmountRange.RandomInRange
                     : CorpseFlameDamageAmountRange.RandomInRange;
                 var beamFactor = 1.5f;
@@ -72,21 +74,20 @@ namespace TCGear
                     num = 99;
                 }
 
-                var pawn = tmpThings[i] as Pawn;
+                var pawn = thing1 as Pawn;
                 BattleLogEntry_DamageTaken battleLogEntry_DamageTaken = null;
                 if (pawn != null)
                 {
                     battleLogEntry_DamageTaken = new BattleLogEntry_DamageTaken(pawn,
-                        RulePackDefOf.DamageEvent_PowerBeam, this.instigator as Pawn);
+                        RulePackDefOf.DamageEvent_PowerBeam, instigator as Pawn);
                     Find.BattleLog.Add(battleLogEntry_DamageTaken);
                 }
 
-                var thing = tmpThings[i];
                 var flame = DamageDefOf.Flame;
                 var amount = (float) num;
-                var instigator = this.instigator;
-                var weaponDef = this.weaponDef;
-                thing.TakeDamage(new DamageInfo(flame, amount, 0f, -1f, instigator, null, weaponDef))
+                var thing = instigator;
+                var thingDef = weaponDef;
+                thing1.TakeDamage(new DamageInfo(flame, amount, 0f, -1f, thing, null, thingDef))
                     .AssociateWithLog(battleLogEntry_DamageTaken);
             }
 
