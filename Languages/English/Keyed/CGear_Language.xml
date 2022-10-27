@@ -2,6 +2,7 @@
 <LanguageData>
   <!--  Settings -->
   <TCGear.Name>Tactical Charged Gear</TCGear.Name>
+  <TCGear.ModVersion>Installed mod-version: {0}</TCGear.ModVersion>
   <TCGear.BarrelReplace>Replace turret barrels:</TCGear.BarrelReplace>
   <TCGear.ResPct>Relative cost for research %:</TCGear.ResPct>
   <TCGear.RepPct>Toolbox repair amount per hour %:</TCGear.RepPct>

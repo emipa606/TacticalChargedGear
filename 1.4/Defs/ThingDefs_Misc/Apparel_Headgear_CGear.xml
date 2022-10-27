@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ArmorHelmetCGearMakeableBase" ParentName="ArmorMachineableBase" Abstract="True">
+    <thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+  <!-- ================================== Helmets ====================================-->
+  <ThingDef ParentName="ArmorHelmetCGearMakeableBase">
+    <defName>Apparel_PowerArmorCGearHelmet</defName>
+    <label>TC Helmet</label>
+    <description>Based on the marine power helmet; has slightly less protection but a lighter model.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTCGTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CGearTech_Armour</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>TableCGear</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorCGearHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>2.2</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>32</Plasteel>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorCGearHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>SpacerMilitary</li>
+        <li>RoyalCombatGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <equippedStatOffsets>
+      <PsychicSensitivity>-0.1</PsychicSensitivity>
+      <ToxicResistance>0.2</ToxicResistance>
+    </equippedStatOffsets>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.34,0.76,0.76,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.34,0.76,0.76,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.33,0.75,0.75,1)</min>
+          <max>(0.35,0.77,0.77,1)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.34,0.76,0.76,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+</Defs>

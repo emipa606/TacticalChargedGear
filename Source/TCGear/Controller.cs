@@ -1,30 +1,29 @@
-﻿using UnityEngine;
+using Mlie;
+using UnityEngine;
 using Verse;
 
-namespace TCGear
+namespace TCGear;
+
+public class Controller : Mod
 {
-    // Token: 0x02000004 RID: 4
-    public class Controller : Mod
+    public static Settings Settings;
+    public static string currentVersion;
+
+    public Controller(ModContentPack content) : base(content)
     {
-        // Token: 0x04000002 RID: 2
-        public static Settings Settings;
+        Settings = GetSettings<Settings>();
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(
+                ModLister.GetActiveModWithIdentifier("Mlie.TacticalChargedGear"));
+    }
 
-        // Token: 0x0600000C RID: 12 RVA: 0x00002291 File Offset: 0x00000491
-        public Controller(ModContentPack content) : base(content)
-        {
-            Settings = GetSettings<Settings>();
-        }
+    public override string SettingsCategory()
+    {
+        return "TCGear.Name".Translate();
+    }
 
-        // Token: 0x0600000A RID: 10 RVA: 0x00002273 File Offset: 0x00000473
-        public override string SettingsCategory()
-        {
-            return "TCGear.Name".Translate();
-        }
-
-        // Token: 0x0600000B RID: 11 RVA: 0x00002284 File Offset: 0x00000484
-        public override void DoSettingsWindowContents(Rect canvas)
-        {
-            Settings.DoWindowContents(canvas);
-        }
+    public override void DoSettingsWindowContents(Rect canvas)
+    {
+        Settings.DoWindowContents(canvas);
     }
 }

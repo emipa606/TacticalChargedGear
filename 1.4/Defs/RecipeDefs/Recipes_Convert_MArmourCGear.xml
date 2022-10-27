@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Helmet -->
+  <RecipeDef>
+    <defName>Make_Convert_MHelm_CGear</defName>
+    <label>Convert Marine Helmet</label>
+    <description>Convert a Marine helmet to a TC Helmet</description>
+    <jobString>Converting TC Helmet</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>5000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <recipeUsers>
+      <li>TableCGear</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmorHelmet</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CGearCtrlChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmorHelmet</li>
+        <li>CGearCtrlChip</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Apparel_PowerArmorCGearHelmet>1</Apparel_PowerArmorCGearHelmet>
+    </products>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>CGearTech_Armour</researchPrerequisite>
+    <unfinishedThingDef>UnfinishedTCGTechArmor</unfinishedThingDef>
+  </RecipeDef>
+  <!-- Body -->
+  <RecipeDef>
+    <defName>Make_Convert_MArmr_CGear</defName>
+    <label>Convert Marine Power Armour</label>
+    <description>Convert Marine armour to  TC Armour</description>
+    <jobString>Converting TC Armour</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>5000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <recipeUsers>
+      <li>TableCGear</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CGearCtrlChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmor</li>
+        <li>CGearCtrlChip</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Apparel_PowerArmorCGear>1</Apparel_PowerArmorCGear>
+    </products>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>CGearTech_Armour</researchPrerequisite>
+    <unfinishedThingDef>UnfinishedTCGTechArmor</unfinishedThingDef>
+  </RecipeDef>
+</Defs>

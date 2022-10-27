@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ===================== TPC ========================= -->
+  <ThingDef ParentName="BaseCGearBullet">
+    <defName>Bullet_CGear_TPC</defName>
+    <label>TPC shot</label>
+    <!-- <thingClass>Projectile_Explosive</thingClass> -->
+    <graphicData>
+      <texPath>Things/Projectile/CGear_TPC</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <projectile>
+      <!--
+		<explosionRadius>2.0</explosionRadius>
+		<explosionDelay>5</explosionDelay>
+		-->
+      <flyOverhead>false</flyOverhead>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseCGearHumanMakeableGun">
+    <defName>Gun_CGear_TPC</defName>
+    <label>TC TPC</label>
+    <description>Computerised particle cannon with gyro stabaliser. Fires emp damaging particle balls.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CGear_TPC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>Interact_CGear</soundInteract>
+    <statBases>
+      <Mass>8.5</Mass>
+      <WorkToMake>120000</WorkToMake>
+      <MarketValue>1920</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+      <!-- <forcedMissRadius>0.5</forcedMissRadius> -->
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>CGearTechTPC</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>120</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <CGearCtrlChip>1</CGearCtrlChip>
+    </costList>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.1</cooldownTime>
+      </li>
+    </tools>
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>AdvancedGun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CGear_TPC</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>50</range>
+        <soundCast>Shot_CGear_TPC</soundCast>
+        <!-- Something Interesting -->
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

@@ -1,23 +1,14 @@
 # TacticalChargedGear
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2026252186
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/TacticalChargedGear]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 # Overview
@@ -47,7 +38,7 @@ Power Chip: Overclocking enhancement chip for melee weapons. (Slight improvement
 Reflex Chip: Tunes aiming characteristics for short range.
 Hunter Chip: Tunes aiming characteristics for long range.
 
-Heatsink Chip: Provides greater heating control with the weapon. Better &quot;cooldown&quot; characteristics.
+Heatsink Chip: Provides greater heating control with the weapon. Better "cooldown" characteristics.
 
 Dodge Chip: Provides an extra 10% dodge chance in melee.
 
@@ -92,13 +83,13 @@ Grenade Mortar magazines: EMP, Flashbang, Fragmentation, Incendiary and Smoke.
 # Additional Mod Notes
 
 
-I have been using TC Gear for a while as it has been developed so am fairly confident with the functional testing and partial balancing of the tech as a late game introduction. I haven&apos;t of course been able to cover extensively all environments and scenarios with usage, so am fairly mutable with the idea of &quot;fine-tuning&quot; the items to find the &quot;best balance&quot; for the items in their given tech setting (whilst considering difficulties). I would like to provide items that are considered as an assistance to the player as a late game item but not simply too OP that it removes the challenge and enjoyment from the game in the process. With this in mind I have provided a specific discussion topic for this purpose.
+I have been using TC Gear for a while as it has been developed so am fairly confident with the functional testing and partial balancing of the tech as a late game introduction. I haven't of course been able to cover extensively all environments and scenarios with usage, so am fairly mutable with the idea of "fine-tuning" the items to find the "best balance" for the items in their given tech setting (whilst considering difficulties). I would like to provide items that are considered as an assistance to the player as a late game item but not simply too OP that it removes the challenge and enjoyment from the game in the process. With this in mind I have provided a specific discussion topic for this purpose.
 
-The toolbox is only a &quot;one&quot; tile item that can also be used as a shelf (storage) and has been additionally made capable for use with relevant vanilla benches and other mod benches that also attach the vanilla toolbox as a facility.
+The toolbox is only a "one" tile item that can also be used as a shelf (storage) and has been additionally made capable for use with relevant vanilla benches and other mod benches that also attach the vanilla toolbox as a facility.
 
 Not all details have been or will be provided for the items as firstly there is too much to sensibly add and secondly, part of the fun of playing with new tech items is to discover their capabilities. I have simply provided sufficient information here for players to have a good general overview of what TC Gear provides. 
 
-This mod has a &quot;slottable&quot; chip enhancement process for the weapons using &quot;JecsTools&quot; as a required base mod. This needs to be loaded after the core mod elements and before this mod itself in the mod ordering. Note the slottable chips have an intentional stack size of one due to limitations in how &quot;JecsTools&quot; take these items from stacks when slotting the items.
+This mod has a "slottable" chip enhancement process for the weapons using "JecsTools" as a required base mod. This needs to be loaded after the core mod elements and before this mod itself in the mod ordering. Note the slottable chips have an intentional stack size of one due to limitations in how "JecsTools" take these items from stacks when slotting the items.
 
 Research techs after Charged Shot (own tab).
 
@@ -140,7 +131,7 @@ Graphics Revision - Oleg Marko
 (CC BY-NC-SA 4.0)
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
