@@ -16,7 +16,7 @@ public class TCPowerBeam : OrbitalStrike
 
     private static readonly IntRange CorpseFlameDamageAmountRange = new IntRange(3, 5);
 
-    private static readonly List<Thing> tmpThings = new List<Thing>();
+    private static readonly List<Thing> tmpThings = [];
 
     public override void StartStrike()
     {
@@ -45,12 +45,12 @@ public class TCPowerBeam : OrbitalStrike
         var c = (from x in GenRadial.RadialCellsAround(Position, EffRadius, true)
             where x.InBounds(Map)
             select x).RandomElementByWeight(x => 1f - Mathf.Min(x.DistanceTo(Position) / EffRadius, 1f) + 0.05f);
-        FireUtility.TryStartFireIn(c, Map, Rand.Range(0.1f, 0.5f));
+        FireUtility.TryStartFireIn(c, Map, Rand.Range(0.1f, 0.5f), null);
         tmpThings.Clear();
         tmpThings.AddRange(c.GetThingList(Map));
         foreach (var thing1 in tmpThings)
         {
-            var num = !(thing1 is Corpse)
+            var num = thing1 is not Corpse
                 ? FlameDamageAmountRange.RandomInRange
                 : CorpseFlameDamageAmountRange.RandomInRange;
             var beamFactor = 1.5f;

@@ -47,7 +47,7 @@ public class TCOrbitalBeam : Gas
             TargetCell, TargetMap);
         tcpowerBeam.duration = 120;
         tcpowerBeam.instigator = this;
-        tcpowerBeam.weaponDef = ThingDefOf.OrbitalTargeterPowerBeam;
+        tcpowerBeam.weaponDef = ThingDef.Named("OrbitalTargeterPowerBeam");
         tcpowerBeam.StartStrike();
         if (!this.DestroyedOrNull())
         {

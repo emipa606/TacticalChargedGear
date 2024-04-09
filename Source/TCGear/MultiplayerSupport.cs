@@ -19,10 +19,10 @@ internal static class MultiplayerSupport
 
         var array = new[]
         {
-            AccessTools.Method(typeof(DamageWorker_TCOrb), "Apply"),
-            AccessTools.Method(typeof(TCPowerBeam), "StartRandomFireAndDoFlameDamage"),
-            AccessTools.Method(typeof(TCBombardment), "CreateRandomExplosion"),
-            AccessTools.Method(typeof(TCBombardment), "StartRandomFire")
+            AccessTools.Method(typeof(DamageWorker_TCOrb), nameof(DamageWorker_TCOrb.Apply)),
+            AccessTools.Method(typeof(TCPowerBeam), nameof(TCPowerBeam.StartRandomFireAndDoFlameDamage)),
+            AccessTools.Method(typeof(TCBombardment), nameof(TCBombardment.CreateRandomExplosion)),
+            AccessTools.Method(typeof(TCBombardment), nameof(TCBombardment.StartRandomFire))
         };
         foreach (var methodInfo in array)
         {

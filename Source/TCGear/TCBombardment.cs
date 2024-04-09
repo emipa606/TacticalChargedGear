@@ -76,11 +76,11 @@ public class TCBombardment : OrbitalStrike
 
     public void StartRandomFire()
     {
-        var unused = def;
+        _ = def;
         var TCFireRad = 15;
         FireUtility.TryStartFireIn((from x in GenRadial.RadialCellsAround(Position, TCFireRad, true)
                 where x.InBounds(Map)
                 select x).RandomElementByWeight(x => DistanceChanceFactor.Evaluate(x.DistanceTo(Position))), Map,
-            Rand.Range(0.1f, 0.925f));
+            Rand.Range(0.1f, 0.925f), null);
     }
 }

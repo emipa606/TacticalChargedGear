@@ -84,7 +84,7 @@ internal static class TCGOptions_Initializer
                     continue;
                 }
 
-                var unused = VP.consumeFuelPerShot;
+                _ = VP.consumeFuelPerShot;
                 VP.consumeFuelPerShot = 0f;
             }
         }

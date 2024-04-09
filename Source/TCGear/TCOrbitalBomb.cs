@@ -47,7 +47,7 @@ public class TCOrbitalBomb : Gas
             TargetCell, TargetMap);
         tcbombardment.duration = 120;
         tcbombardment.instigator = this;
-        tcbombardment.weaponDef = ThingDefOf.OrbitalTargeterBombardment;
+        tcbombardment.weaponDef = ThingDef.Named("OrbitalTargeterBombardment");
         tcbombardment.StartStrike();
         if (!this.DestroyedOrNull())
         {
