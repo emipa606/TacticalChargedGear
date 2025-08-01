@@ -18,7 +18,7 @@ public class TCOrbitalBomb : Gas
         Scribe_Values.Look(ref destroyTick, "destroyTick");
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         if (destroyTick <= Find.TickManager.TicksGame)
         {
@@ -31,11 +31,11 @@ public class TCOrbitalBomb : Gas
             return;
         }
 
-        var TargetMap = Map;
-        var TargetCell = Position;
+        var targetMap = Map;
+        var targetCell = Position;
         if (Find.TickManager.TicksGame % 10 == 0)
         {
-            FleckMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), TargetMap, 1f);
+            FleckMaker.ThrowSmoke(this.TrueCenter() + new Vector3(0f, 0f, 0.1f), targetMap, 1f);
         }
 
         if (Find.TickManager.TicksGame % 300 != 0)
@@ -44,7 +44,7 @@ public class TCOrbitalBomb : Gas
         }
 
         var tcbombardment = (TCBombardment)GenSpawn.Spawn(DefDatabase<ThingDef>.GetNamed("TCBombardment"),
-            TargetCell, TargetMap);
+            targetCell, targetMap);
         tcbombardment.duration = 120;
         tcbombardment.instigator = this;
         tcbombardment.weaponDef = ThingDef.Named("OrbitalTargeterBombardment");

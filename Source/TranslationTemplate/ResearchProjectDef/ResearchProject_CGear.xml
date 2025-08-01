@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Tactical Charged Gear -->
+  <CGearTech.label>Tactical Charged Gear</CGearTech.label>
+  <!-- EN: Grants the ability to make computerised charged items. -->
+  <CGearTech.description>Grants the ability to make computerised charged items.</CGearTech.description>
+  <!-- EN: TC Gear Explosives -->
+  <CGearTech_AdvGrd.label>TC Gear Explosives</CGearTech_AdvGrd.label>
+  <!-- EN: Grants the ability to make specialized explosives. -->
+  <CGearTech_AdvGrd.description>Grants the ability to make specialized explosives.</CGearTech_AdvGrd.description>
+  <!-- EN: TC Gear Adv. Shells -->
+  <CGearTech_AdvShells.label>TC Gear Adv. Shells</CGearTech_AdvShells.label>
+  <!-- EN: Grants the ability to make advanced shells and IDEs. -->
+  <CGearTech_AdvShells.description>Grants the ability to make advanced shells and IDEs.</CGearTech_AdvShells.description>
+  <!-- EN: TC Armour -->
+  <CGearTech_Armour.label>TC Armour</CGearTech_Armour.label>
+  <!-- EN: Grants the ability to make computerised charged armour. -->
+  <CGearTech_Armour.description>Grants the ability to make computerised charged armour.</CGearTech_Armour.description>
+  <!-- EN: TC Turrets -->
+  <CGearTech_Turrets.label>TC Turrets</CGearTech_Turrets.label>
+  <!-- EN: Allows the ability to make computerised charged turrets. -->
+  <CGearTech_Turrets.description>Allows the ability to make computerised charged turrets.</CGearTech_Turrets.description>
+  <!-- EN: TC Gear Enhancements -->
+  <CGearTechEnhance.label>TC Gear Enhancements</CGearTechEnhance.label>
+  <!-- EN: Grants the ability to enhance computerised charged items. -->
+  <CGearTechEnhance.description>Grants the ability to enhance computerised charged items.</CGearTechEnhance.description>
+  <!-- EN: TC Gear Specialization -->
+  <CGearTechSpecialist.label>TC Gear Specialization</CGearTechSpecialist.label>
+  <!-- EN: Grants the ability to specialise computerised charged items. -->
+  <CGearTechSpecialist.description>Grants the ability to specialise computerised charged items.</CGearTechSpecialist.description>
+  <!-- EN: Tactical Cannons -->
+  <CGearTechTPC.label>Tactical Cannons</CGearTechTPC.label>
+  <!-- EN: Grants the ability to make TC Cannons. -->
+  <CGearTechTPC.description>Grants the ability to make TC Cannons.</CGearTechTPC.description>
+</LanguageData>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Mortar -->
+  <Artillery_Mortar_CGear.label>TC Mortar</Artillery_Mortar_CGear.label>
+  <!-- EN: Mortar launcher. Lobs bombs over walls. Inaccurate but long-ranged. -->
+  <Artillery_Mortar_CGear.description>Mortar launcher. Lobs bombs over walls. Inaccurate but long-ranged.</Artillery_Mortar_CGear.description>
+  <!-- EN: TC Mortar -->
+  <Artillery_Mortar_CGear.verbs.Verb_Shoot.label>TC Mortar</Artillery_Mortar_CGear.verbs.Verb_Shoot.label>
+  <!-- EN: TC Mini-turret bullet -->
+  <Bullet_CGear_MiniTurret.label>TC Mini-turret bullet</Bullet_CGear_MiniTurret.label>
+  <!-- EN: TC Mini-turret gun -->
+  <Gun_CGear_MiniTurret.label>TC Mini-turret gun</Gun_CGear_MiniTurret.label>
+  <!-- EN: A tactical charged automatic gun made to be mounted on a turret. -->
+  <Gun_CGear_MiniTurret.description>A tactical charged automatic gun made to be mounted on a turret.</Gun_CGear_MiniTurret.description>
+  <!-- EN: TC Mini-turret gun -->
+  <Gun_CGear_MiniTurret.verbs.Verb_Shoot.label>TC Mini-turret gun</Gun_CGear_MiniTurret.verbs.Verb_Shoot.label>
+  <!-- EN: TC IED EMP trap -->
+  <TrapIED_CGear_EMP.label>TC IED EMP trap</TrapIED_CGear_EMP.label>
+  <!-- EN: A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_CGear_EMP.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_EMP.description>
+  <!-- EN: TC IED incendiary trap -->
+  <TrapIED_CGear_Flame.label>TC IED incendiary trap</TrapIED_CGear_Flame.label>
+  <!-- EN: A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_CGear_Flame.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_Flame.description>
+  <!-- EN: TC IED Flashbang trap -->
+  <TrapIED_CGear_FlashBang.label>TC IED Flashbang trap</TrapIED_CGear_FlashBang.label>
+  <!-- EN: A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_CGear_FlashBang.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_FlashBang.description>
+  <!-- EN: TC IED Charged trap -->
+  <TrapIED_CGear_HE.label>TC IED Charged trap</TrapIED_CGear_HE.label>
+  <!-- EN: A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_CGear_HE.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_HE.description>
+  <!-- EN: TC IED smoke trap -->
+  <TrapIED_CGear_Smoke.label>TC IED smoke trap</TrapIED_CGear_Smoke.label>
+  <!-- EN: A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. -->
+  <TrapIED_CGear_Smoke.description>A TC Shell connected to a touch-activated trigger. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</TrapIED_CGear_Smoke.description>
+  <!-- EN: TC Mortar -->
+  <Turret_CGear_Mortar.label>TC Mortar</Turret_CGear_Mortar.label>
+  <!-- EN: Based on the standard manned mortar but with improved aiming capabilities. -->
+  <Turret_CGear_Mortar.description>Based on the standard manned mortar but with improved aiming capabilities.</Turret_CGear_Mortar.description>
+  <!-- EN: TC Mini-turret -->
+  <Turret_MiniTurret_CGear.label>TC Mini-turret</Turret_MiniTurret_CGear.label>
+  <!-- EN: Based on the standard mini-turret. -->
+  <Turret_MiniTurret_CGear.description>Based on the standard mini-turret.</Turret_MiniTurret_CGear.description>
+  <!-- EN: Barrel durability -->
+  <Turret_MiniTurret_CGear.comps.CompRefuelable.fuelGizmoLabel>Barrel durability</Turret_MiniTurret_CGear.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: Shots until barrel change -->
+  <Turret_MiniTurret_CGear.comps.CompRefuelable.fuelLabel>Shots until barrel change</Turret_MiniTurret_CGear.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Cannot shoot: Needs new barrel -->
+  <Turret_MiniTurret_CGear.comps.CompRefuelable.outOfFuelMessage>Cannot shoot: Needs new barrel</Turret_MiniTurret_CGear.comps.CompRefuelable.outOfFuelMessage>
+</LanguageData>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Marine Armor -->
+  <Apparel_PowerArmorCGear.label>TC Marine Armor</Apparel_PowerArmorCGear.label>
+  <!-- EN: Based on the standard marine power armour, but lighter with less protection. Includes gyro stabalisers for assisted melee. -->
+  <Apparel_PowerArmorCGear.description>Based on the standard marine power armour, but lighter with less protection. Includes gyro stabalisers for assisted melee.</Apparel_PowerArmorCGear.description>
+  <!-- EN: TC Marine Shielded Armor -->
+  <Apparel_ShieldedArmorCGear.label>TC Marine Shielded Armor</Apparel_ShieldedArmorCGear.label>
+  <!-- EN: A shielded variant of TC Power Armour that has slightly less protection for reduced mass, but compensates for this with an integrated energy shield. (Ranged weapons can be used with the shield). -->
+  <Apparel_ShieldedArmorCGear.description>A shielded variant of TC Power Armour that has slightly less protection for reduced mass, but compensates for this with an integrated energy shield. (Ranged weapons can be used with the shield).</Apparel_ShieldedArmorCGear.description>
+  <!-- EN: unfinished advanced TCG armor -->
+  <UnfinishedTCGTechArmor.label>unfinished advanced TCG armor</UnfinishedTCGTechArmor.label>
+  <!-- EN: An unfinished piece of high-tech tactical charge gear armor. -->
+  <UnfinishedTCGTechArmor.description>An unfinished piece of high-tech tactical charge gear armor.</UnfinishedTCGTechArmor.description>
+</LanguageData>

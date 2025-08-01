@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Craft Tactical Charge Gear -->
+  <CraftCGear.label>Craft Tactical Charge Gear</CraftCGear.label>
+  <!-- EN: Crafting -->
+  <CraftCGear.gerund>Crafting</CraftCGear.gerund>
+  <!-- EN: Craft -->
+  <CraftCGear.verb>Craft</CraftCGear.verb>
+  <!-- EN: Craft TC Chips -->
+  <CraftCGearChips.label>Craft TC Chips</CraftCGearChips.label>
+  <!-- EN: Crafting -->
+  <CraftCGearChips.gerund>Crafting</CraftCGearChips.gerund>
+  <!-- EN: Craft -->
+  <CraftCGearChips.verb>Craft</CraftCGearChips.verb>
+</LanguageData>

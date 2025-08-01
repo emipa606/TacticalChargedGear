@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Shell -->
+  <Bullet_Shell_CGear.label>TC Shell</Bullet_Shell_CGear.label>
+  <!-- EN: TC EMP shell -->
+  <Bullet_Shell_CGear_EMP.label>TC EMP shell</Bullet_Shell_CGear_EMP.label>
+  <!-- EN: TC incendiary shell -->
+  <Bullet_Shell_CGear_Flame.label>TC incendiary shell</Bullet_Shell_CGear_Flame.label>
+  <!-- EN: TC Flashbang shell -->
+  <Bullet_Shell_CGear_FlashBang.label>TC Flashbang shell</Bullet_Shell_CGear_FlashBang.label>
+  <!-- EN: TC Smoke shell -->
+  <Bullet_Shell_CGear_Smoke.label>TC Smoke shell</Bullet_Shell_CGear_Smoke.label>
+  <!-- EN: TC EMP shell -->
+  <Shell_CGear_EMP.label>TC EMP shell</Shell_CGear_EMP.label>
+  <!-- EN: A shell filled with batteries and antennas, for generating an electromagnetic pulse when detonated. Electromagnetic pulses temporarily disable electrical devices and mechanoids. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_CGear_EMP.description>A shell filled with batteries and antennas, for generating an electromagnetic pulse when detonated. Electromagnetic pulses temporarily disable electrical devices and mechanoids. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_CGear_EMP.description>
+  <!-- EN: TC incendiary shell -->
+  <Shell_CGear_Flame.label>TC incendiary shell</Shell_CGear_Flame.label>
+  <!-- EN: A shell filled with flammable gel and a small explosive charge. Starts fires when detonated. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_CGear_Flame.description>A shell filled with flammable gel and a small explosive charge. Starts fires when detonated. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_CGear_Flame.description>
+  <!-- EN: TC Flashbang shell -->
+  <Shell_CGear_FlashBang.label>TC Flashbang shell</Shell_CGear_FlashBang.label>
+  <!-- EN: A shell that when fired can stun live targets in an area. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_CGear_FlashBang.description>A shell that when fired can stun live targets in an area. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_CGear_FlashBang.description>
+  <!-- EN: TC Charge Shell -->
+  <Shell_CGear_HE.label>TC Charge Shell</Shell_CGear_HE.label>
+  <!-- EN: A shell filled with TC explosives. Equivalent to an anti-grain warhead. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_CGear_HE.description>A shell filled with TC explosives. Equivalent to an anti-grain warhead. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_CGear_HE.description>
+  <!-- EN: TC Smoke shell -->
+  <Shell_CGear_Smoke.label>TC Smoke shell</Shell_CGear_Smoke.label>
+  <!-- EN: A shell that when fired produces a useful cover of smoke. Can be fired from mortars or installed as a trap. Explodes when damaged. -->
+  <Shell_CGear_Smoke.description>A shell that when fired produces a useful cover of smoke. Can be fired from mortars or installed as a trap. Explodes when damaged.</Shell_CGear_Smoke.description>
+</LanguageData>

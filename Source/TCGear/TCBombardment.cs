@@ -37,7 +37,7 @@ public class TCBombardment : OrbitalStrike
         base.StartStrike();
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (Destroyed)
@@ -58,20 +58,11 @@ public class TCBombardment : OrbitalStrike
 
     public void CreateRandomExplosion()
     {
-        var thingDef = def;
-        var TCBombDmg = 40;
-        var TCBombRad = 12;
-        var TCBombMinBlast = 5;
-        var TCBombMaxBlast = 7;
-        var intVec = (from x in GenRadial.RadialCellsAround(Position, TCBombRad, true)
+        var intVec = (from x in GenRadial.RadialCellsAround(Position, 12, true)
             where x.InBounds(Map)
             select x).RandomElementByWeight(x => DistanceChanceFactor.Evaluate(x.DistanceTo(Position)));
-        var num = (float)Rand.Range(TCBombMinBlast, TCBombMaxBlast);
-        var map = Map;
-        var bomb = DamageDefOf.Bomb;
-        var thing = instigator;
-        var weapon = weaponDef;
-        GenExplosion.DoExplosion(intVec, map, num, bomb, thing, TCBombDmg, -1f, null, weapon, thingDef);
+        var num = (float)Rand.Range(5, 7);
+        GenExplosion.DoExplosion(intVec, Map, num, DamageDefOf.Bomb, instigator, 40, -1f, null, weaponDef, def);
     }
 
     public void StartRandomFire()

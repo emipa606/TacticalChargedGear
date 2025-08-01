@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Aim Chip -->
+  <CGearAimChip.label>TC Aim Chip</CGearAimChip.label>
+  <!-- EN: An aiming enhancement chip used in Tactical Charged (TC) Gear. -->
+  <CGearAimChip.description>An aiming enhancement chip used in Tactical Charged (TC) Gear.</CGearAimChip.description>
+  <!-- EN: TC Boost Chip -->
+  <CGearBoostChip.label>TC Boost Chip</CGearBoostChip.label>
+  <!-- EN: A boost enhancement chip used in Tactical Charged (TC) Gear. -->
+  <CGearBoostChip.description>A boost enhancement chip used in Tactical Charged (TC) Gear.</CGearBoostChip.description>
+  <!-- EN: TC Control Chip -->
+  <CGearCtrlChip.label>TC Control Chip</CGearCtrlChip.label>
+  <!-- EN: A control chip used in Tactical Charged (TC) Gear. -->
+  <CGearCtrlChip.description>A control chip used in Tactical Charged (TC) Gear.</CGearCtrlChip.description>
+  <!-- EN: TC Dodge Chip -->
+  <CGearDodgeChip.label>TC Dodge Chip</CGearDodgeChip.label>
+  <!-- EN: A power enhancement chip used in Tactical Charged (TC) Gear. This empowers the dodge skill of the wielder. -->
+  <CGearDodgeChip.description>A power enhancement chip used in Tactical Charged (TC) Gear. This empowers the dodge skill of the wielder.</CGearDodgeChip.description>
+  <!-- EN: TC Heat Sink Chip -->
+  <CGearHeatSinkChip.label>TC Heat Sink Chip</CGearHeatSinkChip.label>
+  <!-- EN: A boost enhancement chip used in Tactical Charged (TC) Gear. This chip control heat dispersement well. -->
+  <CGearHeatSinkChip.description>A boost enhancement chip used in Tactical Charged (TC) Gear. This chip control heat dispersement well.</CGearHeatSinkChip.description>
+  <!-- EN: TC Hunter Chip -->
+  <CGearHunterChip.label>TC Hunter Chip</CGearHunterChip.label>
+  <!-- EN: An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers long range use, at the expense of shorter ranges . -->
+  <CGearHunterChip.description>An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers long range use, at the expense of shorter ranges .</CGearHunterChip.description>
+  <!-- EN: TC Power Chip -->
+  <CGearPowerChip.label>TC Power Chip</CGearPowerChip.label>
+  <!-- EN: A power enhancement chip used in Tactical Charged (TC) Gear. -->
+  <CGearPowerChip.description>A power enhancement chip used in Tactical Charged (TC) Gear.</CGearPowerChip.description>
+  <!-- EN: TC Reflex Chip -->
+  <CGearReflexChip.label>TC Reflex Chip</CGearReflexChip.label>
+  <!-- EN: An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers a more shorter range use, at the expense of longer ranges. -->
+  <CGearReflexChip.description>An aiming enhancement chip used in Tactical Charged (TC) Gear. This chip empowers a more shorter range use, at the expense of longer ranges.</CGearReflexChip.description>
+  <!-- EN: TC Aim Slot -->
+  <CGearSlot_Gun_Aim.label>TC Aim Slot</CGearSlot_Gun_Aim.label>
+  <!-- EN: An enhancement slot for a TC aim chip. -->
+  <CGearSlot_Gun_Aim.description>An enhancement slot for a TC aim chip.</CGearSlot_Gun_Aim.description>
+  <!-- EN: TC Boost Slot -->
+  <CGearSlot_Gun_Boost.label>TC Boost Slot</CGearSlot_Gun_Boost.label>
+  <!-- EN: An enhancement slot for a TC boost chip. -->
+  <CGearSlot_Gun_Boost.description>An enhancement slot for a TC boost chip.</CGearSlot_Gun_Boost.description>
+  <!-- EN: TC Power Slot -->
+  <CGearSlot_Melee_Power.label>TC Power Slot</CGearSlot_Melee_Power.label>
+  <!-- EN: An enhancement slot for a TC power chip. -->
+  <CGearSlot_Melee_Power.description>An enhancement slot for a TC power chip.</CGearSlot_Melee_Power.description>
+  <!-- EN: Unfinished TC Chip -->
+  <UnfinishedCGearCtrlChip.label>Unfinished TC Chip</UnfinishedCGearCtrlChip.label>
+</LanguageData>

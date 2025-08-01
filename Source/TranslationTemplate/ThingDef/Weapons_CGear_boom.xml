@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Grenade launcher (EMP) -->
+  <CGear_GLauncher_EMP.label>TC Grenade launcher (EMP)</CGear_GLauncher_EMP.label>
+  <!-- EN: Charged Grenade launcher. This launcher is set to launch charged EMP grenade ammo. -->
+  <CGear_GLauncher_EMP.description>Charged Grenade launcher. This launcher is set to launch charged EMP grenade ammo.</CGear_GLauncher_EMP.description>
+  <!-- EN: stock -->
+  <CGear_GLauncher_EMP.tools.stock.label>stock</CGear_GLauncher_EMP.tools.stock.label>
+  <!-- EN: barrel -->
+  <CGear_GLauncher_EMP.tools.barrel.label>barrel</CGear_GLauncher_EMP.tools.barrel.label>
+  <!-- EN: TC Grenade launcher (EMP) -->
+  <CGear_GLauncher_EMP.verbs.Verb_Shoot.label>TC Grenade launcher (EMP)</CGear_GLauncher_EMP.verbs.Verb_Shoot.label>
+  <!-- EN: TC Grenade launcher (Incendiary) -->
+  <CGear_GLauncher_Flame.label>TC Grenade launcher (Incendiary)</CGear_GLauncher_Flame.label>
+  <!-- EN: Charged Grenade launcher. This launcher is set to launch charge incendiary grenade ammo. -->
+  <CGear_GLauncher_Flame.description>Charged Grenade launcher. This launcher is set to launch charge incendiary grenade ammo.</CGear_GLauncher_Flame.description>
+  <!-- EN: stock -->
+  <CGear_GLauncher_Flame.tools.stock.label>stock</CGear_GLauncher_Flame.tools.stock.label>
+  <!-- EN: barrel -->
+  <CGear_GLauncher_Flame.tools.barrel.label>barrel</CGear_GLauncher_Flame.tools.barrel.label>
+  <!-- EN: TC Grenade launcher (Incendiary) -->
+  <CGear_GLauncher_Flame.verbs.Verb_Shoot.label>TC Grenade launcher (Incendiary)</CGear_GLauncher_Flame.verbs.Verb_Shoot.label>
+  <!-- EN: TC Grenade launcher (Flashbang) -->
+  <CGear_GLauncher_FlashBang.label>TC Grenade launcher (Flashbang)</CGear_GLauncher_FlashBang.label>
+  <!-- EN: Charged Grenade launcher. This launcher is set to launch charged flashbang grenade ammo. -->
+  <CGear_GLauncher_FlashBang.description>Charged Grenade launcher. This launcher is set to launch charged flashbang grenade ammo.</CGear_GLauncher_FlashBang.description>
+  <!-- EN: stock -->
+  <CGear_GLauncher_FlashBang.tools.stock.label>stock</CGear_GLauncher_FlashBang.tools.stock.label>
+  <!-- EN: barrel -->
+  <CGear_GLauncher_FlashBang.tools.barrel.label>barrel</CGear_GLauncher_FlashBang.tools.barrel.label>
+  <!-- EN: TC Grenade launcher (Flashbang) -->
+  <CGear_GLauncher_FlashBang.verbs.Verb_Shoot.label>TC Grenade launcher (Flashbang)</CGear_GLauncher_FlashBang.verbs.Verb_Shoot.label>
+  <!-- EN: TC Grenade launcher (Frag) -->
+  <CGear_GLauncher_Frag.label>TC Grenade launcher (Frag)</CGear_GLauncher_Frag.label>
+  <!-- EN: Charged Grenade launcher. This launcher is set to launch charged frag grenade ammo. -->
+  <CGear_GLauncher_Frag.description>Charged Grenade launcher. This launcher is set to launch charged frag grenade ammo.</CGear_GLauncher_Frag.description>
+  <!-- EN: stock -->
+  <CGear_GLauncher_Frag.tools.stock.label>stock</CGear_GLauncher_Frag.tools.stock.label>
+  <!-- EN: barrel -->
+  <CGear_GLauncher_Frag.tools.barrel.label>barrel</CGear_GLauncher_Frag.tools.barrel.label>
+  <!-- EN: TC Grenade launcher (Frag) -->
+  <CGear_GLauncher_Frag.verbs.Verb_Shoot.label>TC Grenade launcher (Frag)</CGear_GLauncher_Frag.verbs.Verb_Shoot.label>
+  <!-- EN: TC Grenade launcher (Smoke) -->
+  <CGear_GLauncher_Smoke.label>TC Grenade launcher (Smoke)</CGear_GLauncher_Smoke.label>
+  <!-- EN: Charged Grenade launcher. This launcher is set to launch charged smoke grenade ammo. -->
+  <CGear_GLauncher_Smoke.description>Charged Grenade launcher. This launcher is set to launch charged smoke grenade ammo.</CGear_GLauncher_Smoke.description>
+  <!-- EN: stock -->
+  <CGear_GLauncher_Smoke.tools.stock.label>stock</CGear_GLauncher_Smoke.tools.stock.label>
+  <!-- EN: barrel -->
+  <CGear_GLauncher_Smoke.tools.barrel.label>barrel</CGear_GLauncher_Smoke.tools.barrel.label>
+  <!-- EN: TC Grenade launcher (Smoke) -->
+  <CGear_GLauncher_Smoke.verbs.Verb_Shoot.label>TC Grenade launcher (Smoke)</CGear_GLauncher_Smoke.verbs.Verb_Shoot.label>
+  <!-- EN: TC GL EMP grenade -->
+  <Proj_CGear_GL_EMP.label>TC GL EMP grenade</Proj_CGear_GL_EMP.label>
+  <!-- EN: TC GL Incendiary grenade -->
+  <Proj_CGear_GL_Flame.label>TC GL Incendiary grenade</Proj_CGear_GL_Flame.label>
+  <!-- EN: TC GL Flashbang grenade -->
+  <Proj_CGear_GL_FlashBang.label>TC GL Flashbang grenade</Proj_CGear_GL_FlashBang.label>
+  <!-- EN: TC GL Frag grenade -->
+  <Proj_CGear_GL_Frag.label>TC GL Frag grenade</Proj_CGear_GL_Frag.label>
+  <!-- EN: TC GL Smoke grenade -->
+  <Proj_CGear_GL_Smoke.label>TC GL Smoke grenade</Proj_CGear_GL_Smoke.label>
+  <!-- EN: TC EMP grenade -->
+  <Proj_CGear_GrenadeEMP.label>TC EMP grenade</Proj_CGear_GrenadeEMP.label>
+  <!-- EN: TC Incendiary grenade -->
+  <Proj_CGear_GrenadeFlame.label>TC Incendiary grenade</Proj_CGear_GrenadeFlame.label>
+  <!-- EN: TC Flashbang grenade -->
+  <Proj_CGear_GrenadeFlashBang.label>TC Flashbang grenade</Proj_CGear_GrenadeFlashBang.label>
+  <!-- EN: TC Frag grenade -->
+  <Proj_CGear_GrenadeFrag.label>TC Frag grenade</Proj_CGear_GrenadeFrag.label>
+  <!-- EN: TC Smoke grenade -->
+  <Proj_CGear_GrenadeSmoke.label>TC Smoke grenade</Proj_CGear_GrenadeSmoke.label>
+  <!-- EN: TC EMP Grenades -->
+  <Weapon_CGearGrenadeEMP.label>TC EMP Grenades</Weapon_CGearGrenadeEMP.label>
+  <!-- EN: Charged EMP grenades. They can be thrown a short distance, where they'll explode. -->
+  <Weapon_CGearGrenadeEMP.description>Charged EMP grenades. They can be thrown a short distance, where they'll explode.</Weapon_CGearGrenadeEMP.description>
+  <!-- EN: throw EMP grenade -->
+  <Weapon_CGearGrenadeEMP.verbs.throw_EMP_grenade.label>throw EMP grenade</Weapon_CGearGrenadeEMP.verbs.throw_EMP_grenade.label>
+  <!-- EN: TC Incendiary Grenades -->
+  <Weapon_CGearGrenadeFlame.label>TC Incendiary Grenades</Weapon_CGearGrenadeFlame.label>
+  <!-- EN: Charged incendiary grenades. They can be thrown a short distance, where they'll explode. -->
+  <Weapon_CGearGrenadeFlame.description>Charged incendiary grenades. They can be thrown a short distance, where they'll explode.</Weapon_CGearGrenadeFlame.description>
+  <!-- EN: throw incendiary grenade -->
+  <Weapon_CGearGrenadeFlame.verbs.throw_incendiary_grenade.label>throw incendiary grenade</Weapon_CGearGrenadeFlame.verbs.throw_incendiary_grenade.label>
+  <!-- EN: TC Flashbang Grenades -->
+  <Weapon_CGearGrenadeFlashBang.label>TC Flashbang Grenades</Weapon_CGearGrenadeFlashBang.label>
+  <!-- EN: Charged flashbang grenades. They can be thrown a short distance, where they'll explode. -->
+  <Weapon_CGearGrenadeFlashBang.description>Charged flashbang grenades. They can be thrown a short distance, where they'll explode.</Weapon_CGearGrenadeFlashBang.description>
+  <!-- EN: throw flashbang grenade -->
+  <Weapon_CGearGrenadeFlashBang.verbs.throw_flashbang_grenade.label>throw flashbang grenade</Weapon_CGearGrenadeFlashBang.verbs.throw_flashbang_grenade.label>
+  <!-- EN: TC Frag Grenades -->
+  <Weapon_CGearGrenadeFrag.label>TC Frag Grenades</Weapon_CGearGrenadeFrag.label>
+  <!-- EN: Charged fragmentation grenades. They can be thrown a short distance, where they'll explode. -->
+  <Weapon_CGearGrenadeFrag.description>Charged fragmentation grenades. They can be thrown a short distance, where they'll explode.</Weapon_CGearGrenadeFrag.description>
+  <!-- EN: throw frag grenade -->
+  <Weapon_CGearGrenadeFrag.verbs.throw_frag_grenade.label>throw frag grenade</Weapon_CGearGrenadeFrag.verbs.throw_frag_grenade.label>
+  <!-- EN: TC Smoke Grenades -->
+  <Weapon_CGearGrenadeSmoke.label>TC Smoke Grenades</Weapon_CGearGrenadeSmoke.label>
+  <!-- EN: Charged smoke grenades. They can be thrown a short distance, where they'll explode. -->
+  <Weapon_CGearGrenadeSmoke.description>Charged smoke grenades. They can be thrown a short distance, where they'll explode.</Weapon_CGearGrenadeSmoke.description>
+  <!-- EN: throw smoke grenade -->
+  <Weapon_CGearGrenadeSmoke.verbs.throw_smoke_grenade.label>throw smoke grenade</Weapon_CGearGrenadeSmoke.verbs.throw_smoke_grenade.label>
+</LanguageData>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Make chip TC Aim -->
+  <MakeAimCGearChip.label>Make chip TC Aim</MakeAimCGearChip.label>
+  <!-- EN: Craft a TC Aim chip. -->
+  <MakeAimCGearChip.description>Craft a TC Aim chip.</MakeAimCGearChip.description>
+  <!-- EN: Making a TC Aim chip. -->
+  <MakeAimCGearChip.jobString>Making a TC Aim chip.</MakeAimCGearChip.jobString>
+  <!-- EN: Make chip TC Boost -->
+  <MakeBoostCGearChip.label>Make chip TC Boost</MakeBoostCGearChip.label>
+  <!-- EN: Craft a TC Boost chip. -->
+  <MakeBoostCGearChip.description>Craft a TC Boost chip.</MakeBoostCGearChip.description>
+  <!-- EN: Making a TC Boost chip. -->
+  <MakeBoostCGearChip.jobString>Making a TC Boost chip.</MakeBoostCGearChip.jobString>
+  <!-- EN: Make chip TC Control -->
+  <MakeCGearChip.label>Make chip TC Control</MakeCGearChip.label>
+  <!-- EN: Craft a TC control chip. -->
+  <MakeCGearChip.description>Craft a TC control chip.</MakeCGearChip.description>
+  <!-- EN: Making a TC control chip. -->
+  <MakeCGearChip.jobString>Making a TC control chip.</MakeCGearChip.jobString>
+  <!-- EN: Make chips 5 TC control -->
+  <MakeCGearChip_bulk.label>Make chips 5 TC control</MakeCGearChip_bulk.label>
+  <!-- EN: Craft 5 TC control chips. -->
+  <MakeCGearChip_bulk.description>Craft 5 TC control chips.</MakeCGearChip_bulk.description>
+  <!-- EN: Making 5 TC chips. -->
+  <MakeCGearChip_bulk.jobString>Making 5 TC chips.</MakeCGearChip_bulk.jobString>
+  <!-- EN: Make chip TC Dodge -->
+  <MakeDodgeCGearChip.label>Make chip TC Dodge</MakeDodgeCGearChip.label>
+  <!-- EN: Craft a TC Dodge chip. -->
+  <MakeDodgeCGearChip.description>Craft a TC Dodge chip.</MakeDodgeCGearChip.description>
+  <!-- EN: Making a TC Dodge chip. -->
+  <MakeDodgeCGearChip.jobString>Making a TC Dodge chip.</MakeDodgeCGearChip.jobString>
+  <!-- EN: Make chip TC Heat Sink -->
+  <MakeHeatSinkCGearChip.label>Make chip TC Heat Sink</MakeHeatSinkCGearChip.label>
+  <!-- EN: Craft a TC Heat Sink chip. -->
+  <MakeHeatSinkCGearChip.description>Craft a TC Heat Sink chip.</MakeHeatSinkCGearChip.description>
+  <!-- EN: Making a TC Heat Sink chip. -->
+  <MakeHeatSinkCGearChip.jobString>Making a TC Heat Sink chip.</MakeHeatSinkCGearChip.jobString>
+  <!-- EN: Make chip TC Hunter -->
+  <MakeHunterCGearChip.label>Make chip TC Hunter</MakeHunterCGearChip.label>
+  <!-- EN: Craft a TC Hunter chip. -->
+  <MakeHunterCGearChip.description>Craft a TC Hunter chip.</MakeHunterCGearChip.description>
+  <!-- EN: Making a TC Hunter chip. -->
+  <MakeHunterCGearChip.jobString>Making a TC Hunter chip.</MakeHunterCGearChip.jobString>
+  <!-- EN: Make chip TC Power -->
+  <MakePowerCGearChip.label>Make chip TC Power</MakePowerCGearChip.label>
+  <!-- EN: Craft a TC Power chip. -->
+  <MakePowerCGearChip.description>Craft a TC Power chip.</MakePowerCGearChip.description>
+  <!-- EN: Making a TC Power chip. -->
+  <MakePowerCGearChip.jobString>Making a TC Power chip.</MakePowerCGearChip.jobString>
+  <!-- EN: Make chip TC Reflex -->
+  <MakeReflexCGearChip.label>Make chip TC Reflex</MakeReflexCGearChip.label>
+  <!-- EN: Craft a TC Reflex chip. -->
+  <MakeReflexCGearChip.description>Craft a TC Reflex chip.</MakeReflexCGearChip.description>
+  <!-- EN: Making a TC Reflex chip. -->
+  <MakeReflexCGearChip.jobString>Making a TC Reflex chip.</MakeReflexCGearChip.jobString>
+</LanguageData>

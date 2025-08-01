@@ -17,38 +17,38 @@ public class PelShieldApparel : Apparel
 
     public const int JitterDurationTicks = 8;
 
-    public static readonly Material BubbleMat =
+    private static readonly Material BubbleMat =
         MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent);
 
     private static readonly SoundDef energyShieldBroken = SoundDef.Named("EnergyShield_Broken");
 
-    public readonly float ApparelScorePerEnergyMax = 0.25f;
+    private readonly float ApparelScorePerEnergyMax = 0.25f;
 
-    public readonly float EnergyLossPerDamage = 0.03f;
+    private readonly float EnergyLossPerDamage = 0.03f;
 
-    public readonly float EnergyOnReset = 0.2f;
+    private readonly float EnergyOnReset = 0.2f;
 
-    public readonly int KeepDisplayingTicks = 1000;
+    private readonly int KeepDisplayingTicks = 1000;
 
-    public readonly int StartingTicksToReset = 2500;
+    private readonly int StartingTicksToReset = 2500;
 
     public float energy;
 
-    public Vector3 impactAngleVect;
+    private Vector3 impactAngleVect;
 
-    public int lastAbsorbDamageTick = -9999;
+    private int lastAbsorbDamageTick = -9999;
 
-    public int lastKeepDisplayTick = -9999;
+    private int lastKeepDisplayTick = -9999;
 
-    public int ticksToReset = -1;
+    private int ticksToReset = -1;
 
-    public float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
+    private float EnergyMax => this.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
 
-    public float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
+    private float EnergyGainPerTick => this.GetStatValue(StatDefOf.EnergyShieldRechargeRate) / 60f;
 
     public float Energy => energy;
 
-    public ShieldState ShieldState => ticksToReset > 0 ? ShieldState.Resetting : ShieldState.Active;
+    private ShieldState ShieldState => ticksToReset > 0 ? ShieldState.Resetting : ShieldState.Active;
 
     private bool ShouldDisplay
     {
@@ -89,7 +89,7 @@ public class PelShieldApparel : Apparel
         return EnergyMax * ApparelScorePerEnergyMax;
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         var wearer = Wearer;

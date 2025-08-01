@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC EMP Ammo Grenade Mortar -->
+  <Ammo_CGear_GrdEMP.label>TC EMP Ammo Grenade Mortar</Ammo_CGear_GrdEMP.label>
+  <!-- EN: A specialised magazine loaded with TC EMP grenades for use in the TC Grenade Mortar. Explodes when damaged. -->
+  <Ammo_CGear_GrdEMP.description>A specialised magazine loaded with TC EMP grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdEMP.description>
+  <!-- EN: TC Incendiary Ammo Grenade Mortar -->
+  <Ammo_CGear_GrdFlame.label>TC Incendiary Ammo Grenade Mortar</Ammo_CGear_GrdFlame.label>
+  <!-- EN: A specialised magazine loaded with TC incendiary grenades for use in the TC Grenade Mortar. Explodes when damaged. -->
+  <Ammo_CGear_GrdFlame.description>A specialised magazine loaded with TC incendiary grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFlame.description>
+  <!-- EN: TC Flashbang Ammo Grenade Mortar -->
+  <Ammo_CGear_GrdFlashbang.label>TC Flashbang Ammo Grenade Mortar</Ammo_CGear_GrdFlashbang.label>
+  <!-- EN: A specialised magazine loaded with TC flashbang grenades for use in the TC Grenade Mortar. Explodes when damaged. -->
+  <Ammo_CGear_GrdFlashbang.description>A specialised magazine loaded with TC flashbang grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFlashbang.description>
+  <!-- EN: TC Frag Ammo Grenade Mortar -->
+  <Ammo_CGear_GrdFrag.label>TC Frag Ammo Grenade Mortar</Ammo_CGear_GrdFrag.label>
+  <!-- EN: A specialised magazine loaded with TC frag grenades for use in the TC Grenade Mortar. Explodes when damaged. -->
+  <Ammo_CGear_GrdFrag.description>A specialised magazine loaded with TC frag grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdFrag.description>
+  <!-- EN: TC Smoke Ammo Grenade Mortar -->
+  <Ammo_CGear_GrdSmoke.label>TC Smoke Ammo Grenade Mortar</Ammo_CGear_GrdSmoke.label>
+  <!-- EN: A specialised magazine loaded with TC smoke grenades for use in the TC Grenade Mortar. Explodes when damaged. -->
+  <Ammo_CGear_GrdSmoke.description>A specialised magazine loaded with TC smoke grenades for use in the TC Grenade Mortar. Explodes when damaged.</Ammo_CGear_GrdSmoke.description>
+  <!-- EN: TC EMP grenade -->
+  <Proj_CGear_MortarGrenadeEMP.label>TC EMP grenade</Proj_CGear_MortarGrenadeEMP.label>
+  <!-- EN: TC Incendiary grenade -->
+  <Proj_CGear_MortarGrenadeFlame.label>TC Incendiary grenade</Proj_CGear_MortarGrenadeFlame.label>
+  <!-- EN: TC Flashbang grenade -->
+  <Proj_CGear_MortarGrenadeFlashBang.label>TC Flashbang grenade</Proj_CGear_MortarGrenadeFlashBang.label>
+  <!-- EN: TC Frag grenade -->
+  <Proj_CGear_MortarGrenadeFrag.label>TC Frag grenade</Proj_CGear_MortarGrenadeFrag.label>
+  <!-- EN: TC Smoke grenade -->
+  <Proj_CGear_MortarGrenadeSmoke.label>TC Smoke grenade</Proj_CGear_MortarGrenadeSmoke.label>
+</LanguageData>

@@ -14,36 +14,36 @@ public class Settings : ModSettings
     public void DoWindowContents(Rect canvas)
     {
         var gap = 12f;
-        var listing_Standard = new Listing_Standard
+        var listingStandard = new Listing_Standard
         {
             ColumnWidth = canvas.width
         };
-        listing_Standard.Begin(canvas);
-        listing_Standard.Gap(gap);
+        listingStandard.Begin(canvas);
+        listingStandard.Gap(gap);
         checked
         {
-            listing_Standard.Label("TCGear.RepPct".Translate() + "  " + (int)RepPct);
-            RepPct = (int)listing_Standard.Slider((int)RepPct, 0f, 10f);
-            listing_Standard.CheckboxLabeled("TCGear.BarrelReplace".Translate(), ref BarrelReplace);
-            listing_Standard.Gap(gap);
-            listing_Standard.Label("TCGear.ResPct".Translate() + "  " + (int)ResPct);
-            ResPct = (int)listing_Standard.Slider((int)ResPct, 10f, 200f);
-            listing_Standard.Gap(gap);
+            listingStandard.Label("TCGear.RepPct".Translate() + "  " + (int)RepPct);
+            RepPct = (int)listingStandard.Slider((int)RepPct, 0f, 10f);
+            listingStandard.CheckboxLabeled("TCGear.BarrelReplace".Translate(), ref BarrelReplace);
+            listingStandard.Gap(gap);
+            listingStandard.Label("TCGear.ResPct".Translate() + "  " + (int)ResPct);
+            ResPct = (int)listingStandard.Slider((int)ResPct, 10f, 200f);
+            listingStandard.Gap(gap);
             Text.Font = 0;
-            listing_Standard.Label("          " + "TCGear.ResWarn".Translate());
-            listing_Standard.Gap(gap);
-            listing_Standard.Label("          " + "TCGear.ResTip".Translate());
+            listingStandard.Label("          " + "TCGear.ResWarn".Translate());
+            listingStandard.Gap(gap);
+            listingStandard.Label("          " + "TCGear.ResTip".Translate());
             Text.Font = GameFont.Small;
-            listing_Standard.Gap(gap);
+            listingStandard.Gap(gap);
             if (Controller.currentVersion != null)
             {
-                listing_Standard.Gap();
+                listingStandard.Gap();
                 GUI.contentColor = Color.gray;
-                listing_Standard.Label("TCGear.ModVersion".Translate(Controller.currentVersion));
+                listingStandard.Label("TCGear.ModVersion".Translate(Controller.currentVersion));
                 GUI.contentColor = Color.white;
             }
 
-            listing_Standard.End();
+            listingStandard.End();
         }
     }
 

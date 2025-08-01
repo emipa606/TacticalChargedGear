@@ -19,9 +19,9 @@ public class CompTCGRepair : ThingComp
     }
 
 
-    public void DoRepair(Thing rep)
+    private void DoRepair(Thing rep)
     {
-        if (!rep.Spawned || !IsActive(rep))
+        if (!rep.Spawned || !isActive(rep))
         {
             return;
         }
@@ -54,15 +54,15 @@ public class CompTCGRepair : ThingComp
         }
     }
 
-    public bool validThingForRep(Thing thing)
+    private static bool validThingForRep(Thing thing)
     {
         return thing.def.IsWeapon || thing.def.IsApparel || thing.def.IsShell;
     }
 
-    public bool IsActive(Thing rep)
+    private static bool isActive(Thing rep)
     {
-        var CPT = rep.TryGetComp<CompPowerTrader>();
-        return (CPT == null || CPT.PowerOn) && !rep.IsBrokenDown();
+        var cpt = rep.TryGetComp<CompPowerTrader>();
+        return (cpt == null || cpt.PowerOn) && !rep.IsBrokenDown();
     }
 
     public override string CompInspectStringExtra()

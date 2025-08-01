@@ -5,10 +5,9 @@ using Verse;
 namespace PelShield;
 
 [HarmonyPatch(typeof(ApparelUtility), nameof(ApparelUtility.CanWearTogether))]
-public class CanWearTogether_PostPatch
+public class ApparelUtility_CanWearTogether
 {
-    [HarmonyPostfix]
-    public static void PostFix(ref bool __result, ThingDef A, ThingDef B)
+    public static void Postfix(ref bool __result, ThingDef A, ThingDef B)
     {
         if (__result && A.statBases.StatListContains(StatDefOf.EnergyShieldEnergyMax) &&
             B.statBases.StatListContains(StatDefOf.EnergyShieldEnergyMax))

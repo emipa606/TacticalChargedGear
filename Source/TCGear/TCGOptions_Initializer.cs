@@ -12,22 +12,22 @@ internal static class TCGOptions_Initializer
         LongEventHandler.QueueLongEvent(Setup, "LibraryStartup", false, null);
     }
 
-    public static void Setup()
+    private static void Setup()
     {
         var projDefs = DefDatabase<ResearchProjectDef>.AllDefsListForReading;
         if (projDefs.Count > 0)
         {
-            var TCGList = TCGResearchList();
-            foreach (var ResDef in projDefs)
+            var tcgList = tcgResearchList();
+            foreach (var resDef in projDefs)
             {
-                if (!TCGList.Contains(ResDef.defName))
+                if (!tcgList.Contains(resDef.defName))
                 {
                     continue;
                 }
 
-                var Resbase = ResDef.baseCost;
+                var Resbase = resDef.baseCost;
                 Resbase = checked((int)Math.Round(Resbase * (Controller.Settings.ResPct / 100f)));
-                ResDef.baseCost = Resbase;
+                resDef.baseCost = Resbase;
             }
         }
 
@@ -77,20 +77,20 @@ internal static class TCGOptions_Initializer
                 continue;
             }
 
-            foreach (var VP in list)
+            foreach (var vp in list)
             {
-                if (VP == null)
+                if (vp == null)
                 {
                     continue;
                 }
 
-                _ = VP.consumeFuelPerShot;
-                VP.consumeFuelPerShot = 0f;
+                _ = vp.consumeFuelPerShot;
+                vp.consumeFuelPerShot = 0f;
             }
         }
     }
 
-    public static List<string> TCGResearchList()
+    private static List<string> tcgResearchList()
     {
         var list = new List<string>();
         list.AddDistinct("CGearTech");

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: TC Grenade Mortar -->
+  <Artillery_Grenade_CGear.label>TC Grenade Mortar</Artillery_Grenade_CGear.label>
+  <!-- EN: Grenade Mortar. Lobs grenades over walls. Inaccurate but long-ranged. -->
+  <Artillery_Grenade_CGear.description>Grenade Mortar. Lobs grenades over walls. Inaccurate but long-ranged.</Artillery_Grenade_CGear.description>
+  <!-- EN: TC Grenade Mortar -->
+  <Artillery_Grenade_CGear.verbs.Verb_TCShootMulti.label>TC Grenade Mortar</Artillery_Grenade_CGear.verbs.Verb_TCShootMulti.label>
+  <!-- EN: TC Grenade Mortar -->
+  <Turret_CGear_Grenade.label>TC Grenade Mortar</Turret_CGear_Grenade.label>
+  <!-- EN: Based on the TC mortar but firing multiple grenades. -->
+  <Turret_CGear_Grenade.description>Based on the TC mortar but firing multiple grenades.</Turret_CGear_Grenade.description>
+</LanguageData>
